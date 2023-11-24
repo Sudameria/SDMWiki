@@ -1,7 +1,7 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/suda2501/wiki.sudameria.com/
- - export REPOPATH=/home/suda2501/repositories/SMDWiki/*
+ - export REPOPATH=/home/suda2501/repositories/SDMWiki/*
  - cp -R $REPOPATH $DEPLOYPATH
  - /opt/cpanel/composer/bin/composer install --no-dev --working-dir=/home/suda2501/wiki.sudameria.com/
 # - php /home/suda2501/wiki.sudameria.com/artisan view:cache
