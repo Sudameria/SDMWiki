@@ -27,27 +27,27 @@ return [
     'chapter_move'                => 'moved chapter',
     'chapter_move_notification' => 'Chapter successfully moved',
 
-    // Books
-    'book_create'                 => 'created book',
-    'book_create_notification'    => 'Book successfully created',
-    'book_create_from_chapter'              => 'converted chapter to book',
-    'book_create_from_chapter_notification' => 'Chapter successfully converted to a book',
-    'book_update'                 => 'updated book',
-    'book_update_notification'    => 'Book successfully updated',
-    'book_delete'                 => 'deleted book',
-    'book_delete_notification'    => 'Book successfully deleted',
-    'book_sort'                   => 'sorted book',
-    'book_sort_notification'      => 'Book successfully re-sorted',
+    // Categorys
+    'book_create'                 => 'created category',
+    'book_create_notification'    => 'Category successfully created',
+    'book_create_from_chapter'              => 'converted chapter to category',
+    'book_create_from_chapter_notification' => 'Chapter successfully converted to a category',
+    'book_update'                 => 'updated category',
+    'book_update_notification'    => 'Category successfully updated',
+    'book_delete'                 => 'deleted category',
+    'book_delete_notification'    => 'Category successfully deleted',
+    'book_sort'                   => 'sorted category',
+    'book_sort_notification'      => 'Category successfully re-sorted',
 
-    // Bookshelves
-    'bookshelf_create'            => 'created shelf',
-    'bookshelf_create_notification'    => 'Shelf successfully created',
-    'bookshelf_create_from_book'    => 'converted book to shelf',
-    'bookshelf_create_from_book_notification'    => 'Book successfully converted to a shelf',
-    'bookshelf_update'                 => 'updated shelf',
-    'bookshelf_update_notification'    => 'Shelf successfully updated',
-    'bookshelf_delete'                 => 'deleted shelf',
-    'bookshelf_delete_notification'    => 'Shelf successfully deleted',
+    // Categoryshelves
+    'bookshelf_create'            => 'created group',
+    'bookshelf_create_notification'    => 'Group successfully created',
+    'bookshelf_create_from_book'    => 'converted category to group',
+    'bookshelf_create_from_book_notification'    => 'Category successfully converted to a group',
+    'bookshelf_update'                 => 'updated group',
+    'bookshelf_update_notification'    => 'Group successfully updated',
+    'bookshelf_delete'                 => 'deleted group',
+    'bookshelf_delete_notification'    => 'Group successfully deleted',
 
     // Revisions
     'revision_restore' => 'restored revision',

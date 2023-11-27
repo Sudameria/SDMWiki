@@ -13,7 +13,7 @@ return [
     'image_intro_upload' => 'Upload a new image by dragging an image file into this window, or by using the "Upload Image" button above.',
     'image_all' => 'All',
     'image_all_title' => 'View all images',
-    'image_book_title' => 'View images uploaded to this book',
+    'image_book_title' => 'View images uploaded to this category',
     'image_page_title' => 'View images uploaded to this page',
     'image_search_hint' => 'Search by image name',
     'image_uploaded' => 'Uploaded :uploadedDate',
