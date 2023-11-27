@@ -13,7 +13,7 @@ return [
     'image_intro_upload' => 'Suba una nueva imagen arrastrando un archivo de imagen en esta ventana, o usando el botón "Subir imagen" de arriba.',
     'image_all' => 'Todas',
     'image_all_title' => 'Ver todas las imágenes',
-    'image_book_title' => 'Ver las imágenes subidas a este libro',
+    'image_book_title' => 'Ver las imágenes subidas a esta categoría',
     'image_page_title' => 'Ver las imágenes subidas a esta página',
     'image_search_hint' => 'Buscar por nombre de imagen',
     'image_uploaded' => 'Subido el :uploadedDate',

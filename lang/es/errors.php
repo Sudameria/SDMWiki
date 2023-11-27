@@ -67,12 +67,12 @@ return [
 
     // Entities
     'entity_not_found' => 'Entidad no encontrada',
-    'bookshelf_not_found' => 'Estante no encontrado',
-    'book_not_found' => 'Libro no encontrado',
+    'bookshelf_not_found' => 'Grupo no encontrado',
+    'book_not_found' => 'Categoría no encontrado',
     'page_not_found' => 'Página no encontrada',
     'chapter_not_found' => 'Capítulo no encontrado',
-    'selected_book_not_found' => 'El libro seleccionado no fue encontrado',
-    'selected_book_chapter_not_found' => 'El libro o capítulo seleccionado no fue encontrado',
+    'selected_book_not_found' => 'La categoría seleccionada no fue encontrado',
+    'selected_book_chapter_not_found' => 'La categoría o capítulo seleccionado no fue encontrado',
     'guests_cannot_save_drafts' => 'Los invitados no pueden guardar borradores',
 
     // Users
