@@ -54,7 +54,7 @@ return [
     'app_color' => 'Primary Color',
     'link_color' => 'Default Link Color',
     'content_colors_desc' => 'Set colors for all elements in the page organisation hierarchy. Choosing colors with a similar brightness to the default colors is recommended for readability.',
-    'bookshelf_color' => 'Shelf Color',
+    'bookshelf_color' => 'Group Color',
     'book_color' => 'Category Color',
     'chapter_color' => 'Chapter Color',
     'page_color' => 'Page Color',
