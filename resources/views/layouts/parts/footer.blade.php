@@ -1,4 +1,4 @@
-<footer class=" text-left primary-background px-xl print-hidden">
+<footer class=" text-left primary-background-light px-xl print-hidden">
     <div class="grid third gap-x-xxl no-row-gap">
         <div>
             <a href="https://wiki.sudameria.com" data-shortcut="home_view" class="logo">

@@ -5103,7 +5103,7 @@ footer {
   flex-shrink: 0;
   padding: 1rem 1rem 1rem 1rem;
   text-align: center;
-  color: #fff;
+  color: #333;
 }
 footer .footer-social {
   padding: 6px 12px;
@@ -5116,7 +5116,7 @@ footer .footer-social ul {
 }
 footer .footer-social ul .icon-border-left {
   padding-left: 5px;
-  border-left: 1px solid #fafafa;
+  border-left: 1px solid #333;
 }
 footer .footer-social ul .icon-border-right {
   padding-left: 15px;
@@ -5127,7 +5127,7 @@ footer .footer-social ul li {
   display: inline-block;
 }
 footer .footer-social ul li a {
-  color: #fff;
+  color: #333;
   margin-left: 0.2em;
 }
 footer .footer-social ul li a .lab,
@@ -5141,13 +5141,13 @@ footer .footer-social ul li a .text-phone {
   font-size: 1.3em;
 }
 footer #foot-links a {
-  color: #fff;
+  color: #333;
   margin-left: 0.2em;
 }
 footer #foot-links h3 {
   font-size: 1.2em;
   font-weight: bold;
-  color: #fff;
+  color: #333;
 }
 
 body.flexbox footer {
