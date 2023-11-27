@@ -24,7 +24,6 @@ class HomeController extends Controller
     {
         $activity = $activities->latest(10);
         $draftPages = [];
-
         if ($this->isSignedIn()) {
             $draftPages = Page::visible()
                 ->where('draft', '=', true)

@@ -5101,12 +5101,53 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
  */
 footer {
   flex-shrink: 0;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   text-align: center;
+  color: #fff;
 }
-
-footer a {
-  margin: 0 0.5em;
+footer .footer-social {
+  padding: 6px 12px;
+  margin: 6px -12px;
+}
+footer .footer-social ul {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 0em;
+}
+footer .footer-social ul .icon-border-left {
+  padding-left: 5px;
+  border-left: 1px solid #fafafa;
+}
+footer .footer-social ul .icon-border-right {
+  padding-left: 15px;
+  padding-right: 3px;
+}
+footer .footer-social ul li {
+  list-style: none;
+  display: inline-block;
+}
+footer .footer-social ul li a {
+  color: #fff;
+  margin-left: 0.2em;
+}
+footer .footer-social ul li a .lab,
+footer .footer-social ul li a .las {
+  font-size: 1.8em;
+}
+footer .footer-social ul li a .text-phone {
+  bottom: 4px;
+  position: relative;
+  margin-left: 5px;
+  font-size: 1.3em;
+}
+footer #foot-links a {
+  color: #fff;
+  margin-left: 0.2em;
+}
+footer #foot-links h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
 }
 
 body.flexbox footer {
