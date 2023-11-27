@@ -7,16 +7,16 @@
 return [
     'my_account' => 'Mi cuenta',
 
-    'shortcuts' => 'Atajos',
+    'shortcuts' => 'Accesos directos',
     'shortcuts_interface' => 'Preferencias de acceso directo en la interfaz',
-    'shortcuts_toggle_desc' => 'Aquí puede activar o desactivar los accesos rápidos de la interfaz, utilizados para la navegación y las acciones.',
-    'shortcuts_customize_desc' => 'Puede personalizar cada uno de los atajos a continuación. Simplemente pulse la combinación de teclas deseada después de seleccionar la entrada para un atajo.',
-    'shortcuts_toggle_label' => 'Atajos de teclado habilitados',
+    'shortcuts_toggle_desc' => 'Aquí puede activar o desactivar los accesos directos de la interfaz, utilizados para la navegación y las acciones.',
+    'shortcuts_customize_desc' => 'Puede personalizar cada uno de los accesos directos a continuación. Simplemente pulse la combinación de teclas deseada después de seleccionar la entrada para un acceso directo.',
+    'shortcuts_toggle_label' => 'Accesos directos habilitados',
     'shortcuts_section_navigation' => 'Navegación',
     'shortcuts_section_actions' => 'Acciones comunes',
-    'shortcuts_save' => 'Guardar atajos',
-    'shortcuts_overlay_desc' => 'Nota: Cuando se activan los atajos de teclado se puede visualizar la ayuda presionando la tecla "?", que resaltará los atajos disponibles para las acciones visibles actualmente en la pantalla.',
-    'shortcuts_update_success' => '¡Se actualizaron las preferencias de atajos de teclado!',
+    'shortcuts_save' => 'Guardar accesos directos',
+    'shortcuts_overlay_desc' => 'Nota: Cuando se activan los accesos directos se puede mostrar la ayuda presionando la tecla "?" que resaltará los accesos rápidos disponibles para las acciones actualmente visibles en la pantalla.',
+    'shortcuts_update_success' => '¡Las preferencias de accesos directos han sido actualizadas!',
     'shortcuts_overview_desc' => 'Gestione los atajos de teclado que puede utilizar para navegar por la interfaz de usuario del sistema.',
 
     'notifications' => 'Preferencias de notificaciones',
