@@ -36,7 +36,10 @@ return [
 
     'app_logo_footer' => 'Logo de la aplicación (Pié de página)',
     'app_logo_footer_desc' => 'Se utiliza en el pié de página de la aplicación. Esta imagen debe ser de 86px de altura. Las imágenes grandes serán reducidas en tamaño.',
-
+    'app_home_title' => 'Título en la landing page',
+    'app_home_title_desc' => 'Título que se mostrará en la landing page arriba del buscador',
+    'app_home_subtitle' => 'Subtítulo en al landing page',
+    'app_home_subtitle_desc' => 'Subtítulo que se mostrará debajp del título de la página principal',
     'app_icon' => 'Icono de la aplicación',
     'app_icon_desc' => 'Se utiliza para las pestañas del navegador y los accesos directos. Debería ser una imagen PNG cuadrada de 256px.',
     'app_homepage' => 'Página de inicio',

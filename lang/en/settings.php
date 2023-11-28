@@ -36,6 +36,10 @@ return [
 
     'app_logo_footer' => 'Application Logo (Footer)',
     'app_logo_footer_desc' => 'This is used in the application footer. This image should be 86px in height. Large images will be scaled down.',
+    'app_home_title' => 'Title in landing page',
+    'app_home_title_desc' => 'Title to be displayed on the site\'s home page',
+    'app_home_subtitle' => 'Subtitle in landing page',
+    'app_home_subtitle_desc' => 'Subtitle to be displayed on the site\'s home page',
 
     'app_icon' => 'Application Icon',
     'app_icon_desc' => 'This icon is used for browser tabs and shortcut icons. This should be a 256px square PNG image.',
