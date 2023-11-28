@@ -5186,7 +5186,7 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
 #header-sudameria .search-box .header-search-box-button {
   background-color: #fafafa;
 }
-#header-sudameria .search-box span {
+#header-sudameria .search-box span .icon {
   width: 5px;
   display: inline-block;
 }
@@ -5213,7 +5213,13 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
   opacity: 0.6;
 }
 
+.dark-mode #header-sudameria .card {
+  background-color: #333;
+}
 .dark-mode #header-sudameria .search-box {
+  background-color: #333;
+}
+.dark-mode #header-sudameria .search-box input {
   background-color: #333;
 }
 .dark-mode #header-sudameria .search-box button[tabindex="-1"] {

@@ -434,7 +434,7 @@ header .search-box.search-active:focus-within {
 
 #header-sudameria {
 
-  
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -522,8 +522,10 @@ header .search-box.search-active:focus-within {
     }
 
     span {
-      width: 5px;
-      display: inline-block;
+      .icon {
+        width: 5px;
+        display: inline-block;
+      }
 
       svg {
         width: 1.5em;
@@ -556,9 +558,18 @@ header .search-box.search-active:focus-within {
 
 .dark-mode {
   #header-sudameria {
+
+    .card {
+      background-color: #333;
+    }
+
     .search-box {
 
       background-color: #333;
+
+      input {
+        background-color: #333;
+      }
 
       button[tabindex="-1"] {
         color: #FFF;
