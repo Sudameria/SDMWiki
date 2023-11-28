@@ -20,6 +20,7 @@ class AppSettingsStore
         if ($category === 'customization') {
             $this->updateAppLogo($request);
             $this->updateAppLogoFooter($request);
+            $this->updateAppHomeImage($request);
             $this->updateAppIcon($request);
         }
     }
@@ -88,6 +89,24 @@ class AppSettingsStore
         if ($request->get('app_logo_reset')) {
             $this->destroyExistingSettingImage('app-logo-footer');
             setting()->remove('app-logo-footer');
+        }
+    }
+
+
+    protected function updateAppHomeImage(Request $request): void
+    {
+        // Update logo image if set
+        if ($request->hasFile('app_home_image')) {
+            $logoFile = $request->file('app_home_image');
+            $this->destroyExistingSettingImage('app-home-image');
+            $image = $this->imageRepo->saveNew($logoFile, 'system');
+            setting()->put('app-home-image', $image->url);
+        }
+
+        // Clear logo image if requested
+        if ($request->get('app_logo_reset')) {
+            $this->destroyExistingSettingImage('app-home-image');
+            setting()->remove('app-home-image');
         }
     }
 

@@ -4742,7 +4742,8 @@ header .dropdown-container {
   padding-inline-start: 16px;
   padding-inline-end: 0;
 }
-header .avatar, header .user-name {
+header .avatar,
+header .user-name {
   display: inline-block;
 }
 header .avatar {
@@ -4782,7 +4783,8 @@ header .user-name:hover {
   }
 }
 
-.header *, .primary-background * {
+.header *,
+.primary-background * {
   outline-color: #FFF;
 }
 
@@ -4878,10 +4880,12 @@ html.dark-mode header .search-box.search-active:focus-within input {
 html.dark-mode header .search-box.search-active:focus-within input {
   border-color: #111;
 }
-header .search-box.search-active:focus-within #header-search-box-button, header .search-box.search-active:focus-within input {
+header .search-box.search-active:focus-within #header-search-box-button,
+header .search-box.search-active:focus-within input {
   color: #444;
 }
-html.dark-mode header .search-box.search-active:focus-within #header-search-box-button, html.dark-mode header .search-box.search-active:focus-within input {
+html.dark-mode header .search-box.search-active:focus-within #header-search-box-button,
+html.dark-mode header .search-box.search-active:focus-within input {
   color: #AAA;
 }
 
@@ -4952,7 +4956,9 @@ html[dir=rtl] .mobile-menu-toggle {
   header .header-links.show {
     display: block;
   }
-  header .links a, header .dropdown-container ul li a, header .dropdown-container ul li button {
+  header .links a,
+  header .dropdown-container ul li a,
+  header .dropdown-container ul li button {
     text-align: start;
     display: grid;
     align-items: center;
@@ -4963,24 +4969,34 @@ html[dir=rtl] .mobile-menu-toggle {
     line-height: 1.4;
     color: #444;
   }
-  html.dark-mode header .links a, html.dark-mode header .dropdown-container ul li a, html.dark-mode header .dropdown-container ul li button {
+  html.dark-mode header .links a,
+  html.dark-mode header .dropdown-container ul li a,
+  html.dark-mode header .dropdown-container ul li button {
     color: #eee;
   }
-  header .links a svg, header .dropdown-container ul li a svg, header .dropdown-container ul li button svg {
+  header .links a svg,
+  header .dropdown-container ul li a svg,
+  header .dropdown-container ul li button svg {
     margin-inline-end: 12px;
     width: 16px;
   }
-  header .links a:hover, header .dropdown-container ul li a:hover, header .dropdown-container ul li button:hover {
+  header .links a:hover,
+  header .dropdown-container ul li a:hover,
+  header .dropdown-container ul li button:hover {
     background-color: var(--color-primary-light);
     color: var(--color-primary);
     text-decoration: none;
   }
-  header .links a:focus, header .dropdown-container ul li a:focus, header .dropdown-container ul li button:focus {
+  header .links a:focus,
+  header .dropdown-container ul li a:focus,
+  header .dropdown-container ul li button:focus {
     background-color: #eee;
     outline-color: var(--color-primary);
     color: var(--color-primary);
   }
-  html.dark-mode header .links a:focus, html.dark-mode header .dropdown-container ul li a:focus, html.dark-mode header .dropdown-container ul li button:focus {
+  html.dark-mode header .links a:focus,
+  html.dark-mode header .dropdown-container ul li a:focus,
+  html.dark-mode header .dropdown-container ul li button:focus {
     background-color: #333;
   }
   header .dropdown-container {
@@ -5078,7 +5094,10 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
     margin-inline-end: 0;
   }
 }
-.faded a, .faded button, .faded span, .faded span > div {
+.faded a,
+.faded button,
+.faded span,
+.faded span > div {
   color: #666;
   fill: #666;
 }
@@ -5094,6 +5113,111 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
 .faded span.faded-text {
   display: inline-block;
   padding: 12px;
+}
+
+.primary-background-opacity {
+  background-color: color-mix(in srgb, var(--color-primary), transparent 66%);
+}
+
+#header-sudameria {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#header-sudameria h3 {
+  color: #FFF;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 50px;
+  font-weight: 700;
+}
+#header-sudameria p {
+  color: #FFF;
+  margin-top: 0px;
+  font-weight: 400;
+  text-transform: none;
+}
+#header-sudameria .search-box-container {
+  height: 300px;
+}
+#header-sudameria .search-box {
+  padding: 0px 0px 0px 0px;
+  background-color: #FFF;
+}
+#header-sudameria .search-box .header-search-box-input {
+  position: relative;
+  z-index: 2;
+}
+#header-sudameria .search-box .global-search-suggestions {
+  top: -3px;
+  z-index: 1;
+}
+#header-sudameria .search-box .search-suggestions-animation {
+  display: block;
+}
+#header-sudameria .search-box .search-suggestions-animation .icon {
+  font-size: 0.8rem;
+  width: 1.88em;
+  height: 1.88em;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+}
+#header-sudameria .search-box .search-suggestions-animation .icon svg {
+  left: 0;
+  top: 0;
+  height: 1em;
+}
+#header-sudameria .search-box input {
+  display: inline-block;
+  border: none;
+  position: relative;
+  z-index: 9;
+  width: 600px;
+}
+#header-sudameria .search-box input:focus {
+  outline: none;
+}
+#header-sudameria .search-box .header-search-box-button {
+  background-color: #fafafa;
+}
+#header-sudameria .search-box span {
+  width: 5px;
+  display: inline-block;
+}
+#header-sudameria .search-box span svg {
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  left: 10px;
+  top: 6px;
+  position: relative;
+  z-index: 10;
+}
+#header-sudameria .search-box button[tabindex="-1"] {
+  background-color: var(--color-primary);
+  display: inline-block;
+  padding: 15px 20px 15px !important;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+#header-sudameria .search-box button[tabindex="-1"]:hover {
+  opacity: 0.6;
+}
+
+.dark-mode #header-sudameria .search-box {
+  background-color: #333;
+}
+.dark-mode #header-sudameria .search-box button[tabindex="-1"] {
+  color: #FFF;
 }
 
 /**

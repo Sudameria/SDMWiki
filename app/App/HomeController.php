@@ -101,7 +101,7 @@ class HomeController extends Controller
             return view('home.specific-page', array_merge($commonData, ['customHomepage' => $customHomepage]));
         }
 
-        return view('home.default', $commonData);
+        return view('home.home', $commonData);
     }
 
     /**

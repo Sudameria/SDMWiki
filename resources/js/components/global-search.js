@@ -22,10 +22,11 @@ export class GlobalSearch extends Component {
 
     setupListeners() {
         const updateSuggestionsDebounced = debounce(this.updateSuggestions.bind(this), 200, false);
-
+        
         // Handle search input changes
         this.input.addEventListener('input', () => {
             const {value} = this.input;
+            
             if (value.length > 0) {
                 this.loadingWrap.style.display = 'block';
                 this.suggestionResultsWrap.style.opacity = '0.5';
