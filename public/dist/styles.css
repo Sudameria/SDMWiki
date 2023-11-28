@@ -5124,6 +5124,10 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
   background-position: center;
   background-size: cover;
 }
+#header-sudameria #header {
+  background-color: rgba(0, 0, 0, 0.5333333333);
+  border-bottom-color: rgba(0, 0, 0, 0) !important;
+}
 #header-sudameria h3 {
   color: #FFF;
   margin-top: 0px;

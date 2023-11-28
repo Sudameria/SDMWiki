@@ -433,11 +433,15 @@ header .search-box.search-active:focus-within {
 }
 
 #header-sudameria {
-
+  #header {
+    background-color: #00000088;
+    border-bottom-color: rgba(0,0,0,0) !important;
+  }
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
 
   h3 {
     color: #FFF;
