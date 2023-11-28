@@ -1,11 +1,12 @@
 <footer class=" text-left primary-background-light px-xl print-hidden">
     <div class="grid third gap-x-xxl no-row-gap">
         <div>
-            <a href="https://wiki.sudameria.com" data-shortcut="home_view" class="logo">
-                <img class="logo-image" src="https://wiki.sudameria.com/uploads/images/system/2023-11/logo-sud.png"
-                    alt="Logo">
-
+            <a href="{{ url('/') }}" data-shortcut="home_view" class="logo">
+                @if(setting('app-logo-footer', '') !== 'none')
+                    <img class="logo-image" src="{{ setting('app-logo-footer', '') === '' ? url('/logo.png') : url(setting('app-logo-footer', '')) }}" alt="Logo">
+                @endif
             </a>
+
         </div>
         <div></div>
 

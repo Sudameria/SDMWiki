@@ -19,6 +19,7 @@ class AppSettingsStore
         $this->storeSimpleSettings($request);
         if ($category === 'customization') {
             $this->updateAppLogo($request);
+            $this->updateAppLogoFooter($request);
             $this->updateAppIcon($request);
         }
     }
@@ -70,6 +71,23 @@ class AppSettingsStore
         if ($request->get('app_logo_reset')) {
             $this->destroyExistingSettingImage('app-logo');
             setting()->remove('app-logo');
+        }
+    }
+
+    protected function updateAppLogoFooter(Request $request): void
+    {
+        // Update logo image if set
+        if ($request->hasFile('app_logo_footer')) {
+            $logoFile = $request->file('app_logo_footer');
+            $this->destroyExistingSettingImage('app-logo-footer');
+            $image = $this->imageRepo->saveNew($logoFile, 'system', 0, null, 86);
+            setting()->put('app-logo-footer', $image->url);
+        }
+
+        // Clear logo image if requested
+        if ($request->get('app_logo_reset')) {
+            $this->destroyExistingSettingImage('app-logo-footer');
+            setting()->remove('app-logo-footer');
         }
     }
 

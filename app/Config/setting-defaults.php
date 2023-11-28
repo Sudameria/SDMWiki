@@ -12,6 +12,7 @@ return [
 
     'app-name'             => 'BookStack',
     'app-logo'             => '',
+    'app-logo-footer'      => '',
     'app-name-header'      => true,
     'app-editor'           => 'wysiwyg',
     'app-color'            => '#206ea7',

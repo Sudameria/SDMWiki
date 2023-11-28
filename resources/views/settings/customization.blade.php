@@ -53,6 +53,25 @@
                 </div>
             </div>
 
+
+            <div class="grid half gap-xl">
+                <div>
+                    <label class="setting-list-label">{{ trans('settings.app_logo_footer') }}</label>
+                    <p class="small">{!! trans('settings.app_logo_footer_desc') !!}</p>
+                </div>
+                <div class="pt-xs">
+                    @include('form.image-picker', [
+                             'removeName' => 'setting-app-logo-footer',
+                             'removeValue' => 'none',
+                             'defaultImage' => url('/logo.png'),
+                             'currentImage' => setting('app-logo-footer'),
+                             'name' => 'app_logo_footer',
+                             'imageClass' => 'logo-image',
+                         ])
+                </div>
+            </div>
+
+
             <div class="grid half gap-xl">
                 <div>
                     <label class="setting-list-label">{{ trans('settings.app_icon') }}</label>
