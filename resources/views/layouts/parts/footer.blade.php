@@ -1,14 +1,15 @@
-<footer class=" text-left primary-background-light px-xl print-hidden">
+<footer class=" text-center primary-background-light px-xl print-hidden">
     <div class="grid third gap-x-xxl no-row-gap">
         <div>
+            {{--
             <a href="{{ url('/') }}" data-shortcut="home_view" class="logo">
                 @if(setting('app-logo-footer', '') !== 'none')
                     <img class="logo-image" src="{{ setting('app-logo-footer', '') === '' ? url('/logo.png') : url(setting('app-logo-footer', '')) }}" alt="Logo">
                 @endif
             </a>
-
+            --}}
         </div>
-        <div></div>
+        
 
         <div class="footer-social col-sm-12 col-lg-3 icons-min">
 
@@ -49,7 +50,7 @@
 
             </ul>
         </div>
-
+        <div></div>
 
     </div>
 
