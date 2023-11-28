@@ -48,6 +48,7 @@ class SettingController extends Controller
         $this->checkPermission('settings-manage');
         $this->validate($request, [
             'app_logo' => ['nullable', ...$this->getImageValidationRules()],
+            'app_logo_footer' => ['nullable', ...$this->getImageValidationRules()],
             'app_icon' => ['nullable', ...$this->getImageValidationRules()],
         ]);
 
