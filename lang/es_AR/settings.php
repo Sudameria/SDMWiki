@@ -46,6 +46,8 @@ return [
     'app_homepage' => 'Página de inicio',
     'app_homepage_desc' => 'Elija la vista que se mostrará en la página de inicio en lugar de la vista predeterminada. Se ignorarán los permisos de la página seleccionada.',
     'app_homepage_select' => 'Elija una página',
+    'app_home_image' => 'Imagen de la landing',
+    'app_home_image_desc' => 'Imagen que se muestra en la landing de la wiki',
     'app_footer_links' => 'Enlaces de pie de página',
     'app_footer_links_desc' => 'Añade enlaces para mostrar dentro del pie de página del sitio. Estos se mostrarán en la parte inferior de la mayoría de las páginas, incluyendo aquellas que no requieren estar registrado. Puede utilizar una etiqueta de "trans::<key>" para utilizar traducciones definidas por el sistema. Por ejemplo: el uso de "trans::common.privacy_policy" proporcionará el texto traducido "Política de privacidad" y "trans::common.terms_of_service" proporcionará el texto traducido "Términos de servicio".',
     'app_footer_links_label' => 'Etiqueta del enlace',

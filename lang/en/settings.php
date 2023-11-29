@@ -51,6 +51,8 @@ return [
     'app_footer_links_label' => 'Link Label',
     'app_footer_links_url' => 'Link URL',
     'app_footer_links_add' => 'Add Footer Link',
+    'app_home_image' => 'Home Image',
+    'app_home_image_desc' => 'Image shown on the wiki home',
     'app_disable_comments' => 'Disable Comments',
     'app_disable_comments_toggle' => 'Disable comments',
     'app_disable_comments_desc' => 'Disables comments across all pages in the application. <br> Existing comments are not shown.',
