@@ -48,18 +48,25 @@ class HomeController extends Controller
 
         $homepageOptions = ['default', 'books', 'bookshelves', 'page'];
         $homepageOption = setting('app-homepage-type', 'default');
+
+        $books = app()->make(BookRepo::class)->getAllPaginated(18);
+
         if (!in_array($homepageOption, $homepageOptions)) {
             $homepageOption = 'default';
         }
 
+ 
         $commonData = [
             'activity'             => $activity,
             'recents'              => $recents,
             'recentlyUpdatedPages' => $recentlyUpdatedPages,
             'draftPages'           => $draftPages,
             'favourites'           => $favourites,
+            'books'                => $books
         ];
 
+
+        
         // Add required list ordering & sorting for books & shelves views.
         if ($homepageOption === 'bookshelves' || $homepageOption === 'books') {
             $key = $homepageOption;
@@ -77,6 +84,7 @@ class HomeController extends Controller
         }
 
         if ($homepageOption === 'bookshelves') {
+            
             $shelves = app()->make(BookshelfRepo::class)->getAllPaginated(18, $commonData['listOptions']->getSort(), $commonData['listOptions']->getOrder());
             $data = array_merge($commonData, ['shelves' => $shelves]);
 

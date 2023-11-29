@@ -11,8 +11,10 @@
             </div>
         </div>
     </div>
+    
 
     <div class="container" id="home-default">
+
         <div class="grid third gap-x-xxl no-row-gap">
             <div>
                 @if(count($draftPages) > 0)
@@ -35,6 +37,10 @@
                     </div>
                 </div>
             </div>
+
+
+
+
 
             <div>
                 @if(count($favourites) > 0)
