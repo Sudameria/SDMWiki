@@ -11,7 +11,7 @@
 
             @include('auth.parts.login-message')
 
-            @include('auth.parts.login-form-' . $authMethod)
+            {{-- @include('auth.parts.login-form-' . $authMethod) --}} 
 
             @if(count($socialDrivers) > 0)
                 <hr class="my-l">
