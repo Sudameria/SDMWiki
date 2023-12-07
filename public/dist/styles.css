@@ -5246,6 +5246,10 @@ footer {
   color: #ffffff;
   background-color: #000;
 }
+footer .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 footer .max-width-1080 {
   max-width: 1080px;
 }
@@ -5275,31 +5279,23 @@ footer .external-logo div {
   background-position: 50%;
   background-repeat: no-repeat;
   width: auto;
-  padding-left: 60px;
-  padding-right: 70px;
 }
 footer .external-logo div:first-child {
   text-align: left;
-  padding-left: 0px;
-  padding-right: 30px;
-}
-footer .external-logo div:first-child img {
-  width: 140px;
 }
 footer .external-logo div:last-child {
   text-align: right;
-  padding-right: 0px;
-  padding-left: 30px;
 }
-footer .external-logo div:last-child span {
-  max-width: 40px !important;
+footer .external-logo div:last-child img {
+  height: 25px !important;
 }
 footer .external-logo div span {
   display: inline-block;
   width: 106px;
+  max-height: 30px;
 }
 footer .external-logo div span img {
-  width: 100%;
+  width: auto;
   height: auto;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -5307,12 +5303,35 @@ footer .external-logo div span img {
 footer .external-logo div span .force-height {
   height: 25px !important;
 }
+@media screen and (max-width: 880px) {
+  footer .external-logo div {
+    text-align: center !important;
+    width: 100%;
+  }
+  footer .external-logo div span {
+    width: 130px;
+    max-height: 30px;
+  }
+  footer .external-logo div span .force-height {
+    height: 50px !important;
+  }
+  footer .external-logo div span .force-height img {
+    width: 150px;
+  }
+  footer .external-logo div:last-child {
+    text-align: right;
+  }
+  footer .external-logo div:last-child img {
+    height: 50px !important;
+  }
+}
 footer .border-bottom-line {
   border-bottom: 1px solid #fff;
 }
 footer .logo-image {
   width: 153px;
   height: auto;
+  padding-left: 0px;
 }
 footer .footer-social ul {
   padding-left: 0px;

@@ -9,6 +9,11 @@ footer {
   color: #ffffff;
   background-color: #000;
 
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .max-width-1080 {
     max-width: 1080px;
   }
@@ -32,6 +37,7 @@ footer {
       font-size: 12px;
       word-wrap: break-word;
       font-weight: 500;
+
       a {
         color: #fff;
       }
@@ -44,35 +50,31 @@ footer {
       background-position: 50%;
       background-repeat: no-repeat;
       width: auto;
-      padding-left: 60px;
-      padding-right: 70px;
 
       &:first-child {
         text-align: left;
-        padding-left: 0px;
-        padding-right: 30px;
-        img {
-          width: 140px;
-        }
+
       }
 
       &:last-child {
         text-align: right;
-        padding-right: 0px;
-        padding-left: 30px;
 
-        span {
-          max-width: 40px !important;
+        img {
+          height: 25px !important;
         }
+
       }
+
+      
 
       span {
         display: inline-block;
 
         width: 106px;
+        max-height: 30px;
 
         img {
-          width: 100%;
+          width: auto;
           height: auto;
           margin-left: auto !important;
           margin-right: auto !important;
@@ -82,6 +84,30 @@ footer {
 
         .force-height {
           height: 25px !important;
+        }
+      }
+      @include smaller-than($m) {
+        text-align: center !important;
+        width: 100%;
+
+        span {
+          width: 130px;
+          max-height: 30px;
+          .force-height {
+            height: 50px !important;
+            img {
+              width: 150px;
+            }
+            
+          }
+        }
+        &:last-child {
+          text-align: right;
+  
+          img {
+            height: 50px !important;
+          }
+  
         }
       }
 
@@ -97,6 +123,7 @@ footer {
   .logo-image {
     width: 153px;
     height: auto;
+    padding-left: 0px;
   }
 
   .footer-social {

@@ -1,5 +1,5 @@
 <footer class=" px-xl print-hidden text-center ">
-    <div class="grid half border-bottom-line max-width-1080 m-auto py-xl">
+    <div class="container py-s flex-container-row gap-l wrap justify-space-between border-bottom-line ">
         <div class="text-left ">
             @if (setting('app-logo-footer', '') !== 'none' && setting('app-logo-footer', '') !== '')
                 <a href="{{ url('/') }}" data-shortcut="home_view" class="logo">
@@ -9,7 +9,7 @@
 
         </div>
 
-        <div class="footer-social  icons-min text-right ">
+        <div class="footer-social icons-min text-right ">
 
             <ul>
                 <li>
@@ -34,7 +34,7 @@
     </div>
 
 
-    <div class="grid fifth border-bottom-line max-width-1080 m-auto py-xl external-logo">
+    <div class="container py-xl flex-container-row gap-l wrap justify-space-between border-bottom-line external-logo">
 
 
 
@@ -49,7 +49,7 @@
                 <img src="/images/Mesa-de-trabajo-2.svg">
             </span>
         </div>
-        <div style="padding: 0px 150px;">
+        <div >
             <span>
                 <img src="/images/Mesa-de-trabajo-3.svg">
             </span>
@@ -59,7 +59,7 @@
                 <img class="force-height" src="/images/Mesa-de-trabajo-4.svg">
             </span>
         </div>
-        <div class="last">
+        <div >
             <span>
                 <img src="/images/Mesa-de-trabajo-5.svg">
             </span>
@@ -68,7 +68,7 @@
 
     </div>
 
-    <div class="grid max-width-1080 m-auto py-xl bottom-text-footer">
+    <div class="container py-xl flex-container-row gap-l wrap justify-space-between bottom-text-footer">
         <p>© 2021 Sudameria Incoming Solutions SRL <br><span>Lavalle 348, C1047, CABA, Argentina | 54.11.5218.6619 | <a href="#">info@sudameria.com.ar</a></span>&nbsp;| Legajo: EVT 11776</p>
     </div>
 
