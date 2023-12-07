@@ -68,6 +68,7 @@ html.dark-mode body {
  * Fonts
  */
 body, button, input, select, label, textarea {
+  letter-spacing: -0.02em !important;
   font-family: var(--font-body);
 }
 
@@ -107,6 +108,7 @@ h4 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em !important;
   font-weight: 400;
   position: relative;
   display: block;
@@ -161,6 +163,7 @@ h2.list-heading {
  * Link styling
  */
 a {
+  letter-spacing: -0.02em !important;
   color: var(--color-link);
   fill: currentColor;
   cursor: pointer;
@@ -201,6 +204,7 @@ a.no-link-style:hover {
  * Other HTML Text Elements
  */
 p, ul, ol, pre, table, blockquote {
+  letter-spacing: -0.02em !important;
   margin-top: 0.3em;
   margin-bottom: 1.375em;
 }

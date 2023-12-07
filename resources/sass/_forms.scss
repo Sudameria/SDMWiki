@@ -1,4 +1,3 @@
-
 .input-base {
   border-radius: 3px;
   border: 1px solid #D4D4D4;
@@ -12,18 +11,25 @@
   width: 250px;
   max-width: 100%;
 
-  &.neg, &.invalid {
+  &.neg,
+  &.invalid {
     border: 1px solid var(--color-negative);
   }
-  &.pos, &.valid {
+
+  &.pos,
+  &.valid {
     border: 1px solid var(--color-positive);
   }
-  &.disabled, &[disabled] {
+
+  &.disabled,
+  &[disabled] {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAMUlEQVQIW2NkwAGuXbv2nxGbHEhCS0uLEUMSJgHShCKJLIEiiS4Bl8QmAZbEJQGSBAC62BuJ+tt7zgAAAABJRU5ErkJggg==);
   }
+
   &[readonly] {
     background-color: #f8f8f8;
   }
+
   &:focus {
     border-color: var(--color-primary);
     outline: 1px solid var(--color-primary);
@@ -46,6 +52,7 @@
 #markdown-editor {
   position: relative;
   z-index: 5;
+
   #markdown-editor-input {
     font-style: normal;
     font-weight: 400;
@@ -56,10 +63,12 @@
     flex: 1;
     border: 0;
     width: 100%;
+
     &:focus {
       outline: 0;
     }
   }
+
   &.fullscreen {
     position: fixed;
     top: 0;
@@ -77,7 +86,8 @@
   flex: 1;
   min-width: 0;
 }
-.markdown-editor-wrap + .markdown-editor-wrap {
+
+.markdown-editor-wrap+.markdown-editor-wrap {
   flex-basis: 50%;
   flex-shrink: 0;
   flex-grow: 0;
@@ -100,6 +110,7 @@
   #markdown-editor {
     flex-direction: column;
   }
+
   #markdown-editor .markdown-editor-wrap {
     width: 100%;
     max-width: 100%;
@@ -107,16 +118,19 @@
     flex-basis: auto !important;
     min-height: 0;
   }
+
   .editor-toolbar-label {
     float: none !important;
     @include lightDark(border-color, #DDD, #555);
     display: block;
   }
-  .markdown-editor-wrap:not(.active) .editor-toolbar + div,
+
+  .markdown-editor-wrap:not(.active) .editor-toolbar+div,
   .markdown-editor-wrap:not(.active) .editor-toolbar .buttons,
   .markdown-editor-wrap:not(.active) .markdown-display {
     display: none;
   }
+
   #markdown-editor .markdown-editor-wrap:not(.active) {
     flex-grow: 0;
     flex: none;
@@ -125,12 +139,14 @@
 
 .markdown-editor-display {
   background-color: #fff;
+
   body {
     display: block;
     background-color: #fff;
     padding-inline-start: 16px;
     padding-inline-end: 16px;
   }
+
   [drawio-diagram]:hover {
     outline: 2px solid var(--color-primary);
   }
@@ -138,6 +154,7 @@
 
 html.markdown-editor-display.dark-mode {
   background-color: #222;
+
   body {
     background-color: #222;
   }
@@ -152,6 +169,7 @@ html.markdown-editor-display.dark-mode {
   @include lightDark(background-color, #FFF, #333);
   @include lightDark(border-color, #CCC, #000);
   flex: none;
+
   @include whenDark {
     button {
       color: #AAA;
@@ -161,9 +179,11 @@ html.markdown-editor-display.dark-mode {
 
 .editor-toolbar .buttons {
   font-size: $fs-m;
+
   .dropdown-menu {
     padding: 0;
   }
+
   .toggle-switch {
     margin: $-s 0;
   }
@@ -175,9 +195,11 @@ html.markdown-editor-display.dark-mode {
   text-align: center;
   border-left: 1px solid;
   @include lightDark(border-color, #DDD, #555);
+
   svg {
     margin-inline-end: 0;
   }
+
   &:hover {
     @include lightDark(background-color, #DDD, #222);
   }
@@ -192,15 +214,19 @@ label {
   font-weight: 400;
   padding-bottom: 2px;
   margin-bottom: 0.2em;
+
   &.inline {
     display: inline-block;
   }
 }
 
-label.radio, label.checkbox {
+label.radio,
+label.checkbox {
   font-weight: 400;
   user-select: none;
-  input[type="radio"], input[type="checkbox"] {
+
+  input[type="radio"],
+  input[type="checkbox"] {
     margin-inline-end: $-xs;
   }
 }
@@ -209,20 +235,29 @@ label.inline.checkbox {
   margin-inline-end: $-m;
 }
 
-label + p.small {
+label+p.small {
   margin-bottom: 0.8em;
 }
 
 table.form-table {
   max-width: 100%;
+
   td {
     overflow: hidden;
     padding: math.div($-xxs, 2) 0;
   }
 }
 
-input[type="text"], input[type="number"], input[type="email"], input[type="date"], input[type="search"], input[type="url"],
-input[type="color"], input[type="password"], select, textarea {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="search"],
+input[type="url"],
+input[type="color"],
+input[type="password"],
+select,
+textarea {
   @extend .input-base;
 }
 
@@ -246,6 +281,7 @@ input[type=date] {
 
 input[type=color] {
   height: 60px;
+
   &.small {
     height: 42px;
     width: 60px;
@@ -259,6 +295,7 @@ input[type=color] {
   grid-template-columns: (16px + $-s) 1fr;
   align-items: center;
   margin: $-m 0;
+
   .custom-checkbox {
     width: 16px;
     height: 16px;
@@ -267,6 +304,7 @@ input[type=color] {
     border: 2px solid currentColor;
     overflow: hidden;
     fill: currentColor;
+
     .svg-icon {
       width: 100%;
       height: 100%;
@@ -279,30 +317,37 @@ input[type=color] {
       transform-origin: center center;
     }
   }
+
   input[type=checkbox] {
     display: none;
   }
-  input[type=checkbox]:checked + .custom-checkbox .svg-icon {
+
+  input[type=checkbox]:checked+.custom-checkbox .svg-icon {
     transform: scale(1);
   }
+
   .custom-checkbox:hover {
     background-color: rgba(0, 0, 0, 0.05);
     opacity: 0.8;
   }
-  input[type=checkbox][disabled] ~ * {
+
+  input[type=checkbox][disabled]~* {
     opacity: 0.8;
     cursor: not-allowed;
   }
-  input[type=checkbox][disabled] ~ .custom-checkbox {
+
+  input[type=checkbox][disabled]~.custom-checkbox {
     border-color: #999;
     color: #999 !important;
     background: #f2f2f2;
   }
 }
+
 .toggle-switch-list {
   .toggle-switch {
     margin: $-xs 0;
   }
+
   &.compact .toggle-switch {
     margin: 1px 0;
   }
@@ -312,26 +357,35 @@ input[type=color] {
   margin-bottom: $-s;
 }
 
-.setting-list > div {
+.setting-list>div {
   border-bottom: 1px solid #DDD;
   padding: $-xl 0;
+
   &:last-child {
     border-bottom: none;
   }
 }
+
 .setting-list-label {
   color: #222;
   font-size: 1rem;
 }
-.setting-list-label + p.small {
+
+.setting-list-label+p.small {
   margin-bottom: 0;
 }
-.setting-list-label + .grid {
+
+.setting-list-label+.grid {
   margin-top: $-m;
 }
 
-.setting-list .grid, .stretch-inputs {
-  input[type=text], input[type=email], input[type=password], select {
+.setting-list .grid,
+.stretch-inputs {
+
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  select {
     width: 100%;
   }
 }
@@ -346,7 +400,11 @@ input[type=color] {
 }
 
 .form-group {
-  div.text-pos, div.text-neg, p.text-post, p.text-neg {
+
+  div.text-pos,
+  div.text-neg,
+  p.text-post,
+  p.text-neg {
     padding: $-xs 0;
   }
 }
@@ -356,6 +414,7 @@ input[type=color] {
   border: 1px solid;
   @include lightDark(border-color, #DDD, #000);
   border-radius: 4px;
+
   .collapse-title {
     margin-inline-start: -$-m;
     margin-inline-end: -$-m;
@@ -364,14 +423,18 @@ input[type=color] {
     width: calc(100% + 32px);
     text-align: start;
   }
-  .collapse-title, .collapse-title label {
+
+  .collapse-title,
+  .collapse-title label {
     cursor: pointer;
   }
+
   .collapse-title label {
     padding-bottom: 0;
     margin-bottom: 0;
     color: inherit;
   }
+
   .collapse-title label:before {
     display: inline-block;
     content: '▸';
@@ -379,10 +442,12 @@ input[type=color] {
     transition: all ease-in-out 400ms;
     transform: rotate(0);
   }
+
   .collapse-content {
     display: none;
     padding-bottom: $-m;
   }
+
   &.open .collapse-title label:before {
     transform: rotate(90deg);
   }
@@ -409,7 +474,11 @@ input[type=color] {
 .search-box {
   max-width: 100%;
   position: relative;
+  border-radius: 5px;
+
+
   button[tabindex="-1"] {
+    border-radius: 0px 5px 5px 0px;
     background-color: transparent;
     border: none;
     @include lightDark(color, #666, #AAA);
@@ -418,11 +487,13 @@ input[type=color] {
     position: absolute;
     left: 8px;
     top: 9px;
+
     @include rtl {
       right: 8px;
       left: auto;
     }
   }
+
   input {
     display: block;
     padding: $-xs * 1.5;
@@ -431,9 +502,11 @@ input[type=color] {
     max-width: 100%;
     height: auto;
   }
+
   &.flexible input {
     width: 100%;
   }
+
   .search-box-cancel {
     left: auto;
     right: 0;
@@ -444,34 +517,43 @@ input[type=color] {
   display: flex;
   height: 38px;
   z-index: -1;
+
   &.floating {
     box-shadow: $bs-med;
     border-radius: 4px;
     overflow: hidden;
+
     @include whenDark {
       border: 1px solid #000;
     }
   }
-  input, button {
+
+  input,
+  button {
     height: 100%;
     border-radius: 0;
     border: 1px solid #ddd;
     @include lightDark(border-color, #ddd, #000);
     margin-inline-start: -1px;
+
     &:last-child {
       border-inline-end: 0;
     }
   }
+
   input {
     border: 0;
     flex: 5;
     padding: $-xs $-s;
-    &:focus, &:active {
+
+    &:focus,
+    &:active {
       outline: 1px dotted var(--color-primary);
       outline-offset: -2px;
       border: 0;
     }
   }
+
   button {
     border: 0;
     width: 48px;
@@ -480,23 +562,28 @@ input[type=color] {
     @include lightDark(background-color, #FFF, #333);
     @include lightDark(color, #444, #AAA);
   }
+
   button:focus {
     outline: 1px dotted var(--color-primary);
     outline-offset: -2px;
   }
+
   svg {
     margin: 0;
   }
+
   @include smaller-than($s) {
     width: 180px;
   }
 }
 
-.outline > input {
+.outline>input {
   border: 0;
   border-bottom: 2px solid #DDD;
   border-radius: 0;
-  &:focus, &:active {
+
+  &:focus,
+  &:active {
     border: 0;
     border-bottom: 2px solid #AAA;
     outline: 0;
@@ -519,7 +606,8 @@ input[type=color] {
   border: 0;
   clip: rect(0, 0, 0, 0);
 }
-.custom-file-input:focus + label {
+
+.custom-file-input:focus+label {
   border-color: var(--color-primary);
   outline: 1px solid var(--color-primary);
 }

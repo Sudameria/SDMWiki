@@ -797,6 +797,7 @@ html.dark-mode body {
  * Fonts
  */
 body, button, input, select, label, textarea {
+  letter-spacing: -0.02em !important;
   font-family: var(--font-body);
 }
 
@@ -836,6 +837,7 @@ h4 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em !important;
   font-weight: 400;
   position: relative;
   display: block;
@@ -890,6 +892,7 @@ h2.list-heading {
  * Link styling
  */
 a {
+  letter-spacing: -0.02em !important;
   color: var(--color-link);
   fill: currentColor;
   cursor: pointer;
@@ -930,6 +933,7 @@ a.no-link-style:hover {
  * Other HTML Text Elements
  */
 p, ul, ol, pre, table, blockquote {
+  letter-spacing: -0.02em !important;
   margin-top: 0.3em;
   margin-bottom: 1.375em;
 }
@@ -2584,8 +2588,16 @@ table.list-table td {
   padding: 6px;
 }
 
-.input-base, input[type=text], input[type=number], input[type=email], input[type=date], input[type=search], input[type=url],
-input[type=color], input[type=password], select, textarea, .fake-input {
+.input-base, input[type=text],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=search],
+input[type=url],
+input[type=color],
+input[type=password],
+select,
+textarea, .fake-input {
   border-radius: 3px;
   border: 1px solid #D4D4D4;
   background-color: #fff;
@@ -2598,39 +2610,127 @@ input[type=color], input[type=password], select, textarea, .fake-input {
   width: 250px;
   max-width: 100%;
 }
-html.dark-mode .input-base, html.dark-mode input[type=text], html.dark-mode input[type=number], html.dark-mode input[type=email], html.dark-mode input[type=date], html.dark-mode input[type=search], html.dark-mode input[type=url],
-html.dark-mode input[type=color], html.dark-mode input[type=password], html.dark-mode select, html.dark-mode textarea, html.dark-mode .fake-input {
+html.dark-mode .input-base, html.dark-mode input[type=text],
+html.dark-mode input[type=number],
+html.dark-mode input[type=email],
+html.dark-mode input[type=date],
+html.dark-mode input[type=search],
+html.dark-mode input[type=url],
+html.dark-mode input[type=color],
+html.dark-mode input[type=password],
+html.dark-mode select,
+html.dark-mode textarea, html.dark-mode .fake-input {
   background-color: #333;
 }
-html.dark-mode .input-base, html.dark-mode input[type=text], html.dark-mode input[type=number], html.dark-mode input[type=email], html.dark-mode input[type=date], html.dark-mode input[type=search], html.dark-mode input[type=url],
-html.dark-mode input[type=color], html.dark-mode input[type=password], html.dark-mode select, html.dark-mode textarea, html.dark-mode .fake-input {
+html.dark-mode .input-base, html.dark-mode input[type=text],
+html.dark-mode input[type=number],
+html.dark-mode input[type=email],
+html.dark-mode input[type=date],
+html.dark-mode input[type=search],
+html.dark-mode input[type=url],
+html.dark-mode input[type=color],
+html.dark-mode input[type=password],
+html.dark-mode select,
+html.dark-mode textarea, html.dark-mode .fake-input {
   border-color: #111;
 }
-html.dark-mode .input-base, html.dark-mode input[type=text], html.dark-mode input[type=number], html.dark-mode input[type=email], html.dark-mode input[type=date], html.dark-mode input[type=search], html.dark-mode input[type=url],
-html.dark-mode input[type=color], html.dark-mode input[type=password], html.dark-mode select, html.dark-mode textarea, html.dark-mode .fake-input {
+html.dark-mode .input-base, html.dark-mode input[type=text],
+html.dark-mode input[type=number],
+html.dark-mode input[type=email],
+html.dark-mode input[type=date],
+html.dark-mode input[type=search],
+html.dark-mode input[type=url],
+html.dark-mode input[type=color],
+html.dark-mode input[type=password],
+html.dark-mode select,
+html.dark-mode textarea, html.dark-mode .fake-input {
   color: #AAA;
 }
-.input-base.neg, input.neg[type=text], input.neg[type=number], input.neg[type=email], input.neg[type=date], input.neg[type=search], input.neg[type=url],
-input.neg[type=color], input.neg[type=password], select.neg, textarea.neg, .neg.fake-input, .input-base.invalid, input.invalid[type=text], input.invalid[type=number], input.invalid[type=email], input.invalid[type=date], input.invalid[type=search], input.invalid[type=url],
-input.invalid[type=color], input.invalid[type=password], select.invalid, textarea.invalid, .invalid.fake-input {
+.input-base.neg, input.neg[type=text],
+input.neg[type=number],
+input.neg[type=email],
+input.neg[type=date],
+input.neg[type=search],
+input.neg[type=url],
+input.neg[type=color],
+input.neg[type=password],
+select.neg,
+textarea.neg, .neg.fake-input, .input-base.invalid, input.invalid[type=text],
+input.invalid[type=number],
+input.invalid[type=email],
+input.invalid[type=date],
+input.invalid[type=search],
+input.invalid[type=url],
+input.invalid[type=color],
+input.invalid[type=password],
+select.invalid,
+textarea.invalid, .invalid.fake-input {
   border: 1px solid var(--color-negative);
 }
-.input-base.pos, input.pos[type=text], input.pos[type=number], input.pos[type=email], input.pos[type=date], input.pos[type=search], input.pos[type=url],
-input.pos[type=color], input.pos[type=password], select.pos, textarea.pos, .pos.fake-input, .input-base.valid, input.valid[type=text], input.valid[type=number], input.valid[type=email], input.valid[type=date], input.valid[type=search], input.valid[type=url],
-input.valid[type=color], input.valid[type=password], select.valid, textarea.valid, .valid.fake-input {
+.input-base.pos, input.pos[type=text],
+input.pos[type=number],
+input.pos[type=email],
+input.pos[type=date],
+input.pos[type=search],
+input.pos[type=url],
+input.pos[type=color],
+input.pos[type=password],
+select.pos,
+textarea.pos, .pos.fake-input, .input-base.valid, input.valid[type=text],
+input.valid[type=number],
+input.valid[type=email],
+input.valid[type=date],
+input.valid[type=search],
+input.valid[type=url],
+input.valid[type=color],
+input.valid[type=password],
+select.valid,
+textarea.valid, .valid.fake-input {
   border: 1px solid var(--color-positive);
 }
-.input-base.disabled, input.disabled[type=text], input.disabled[type=number], input.disabled[type=email], input.disabled[type=date], input.disabled[type=search], input.disabled[type=url],
-input.disabled[type=color], input.disabled[type=password], select.disabled, textarea.disabled, .disabled.fake-input, .input-base[disabled], input[disabled][type=text], input[disabled][type=number], input[disabled][type=email], input[disabled][type=date], input[disabled][type=search], input[disabled][type=url],
-input[disabled][type=color], input[disabled][type=password], select[disabled], textarea[disabled], [disabled].fake-input {
+.input-base.disabled, input.disabled[type=text],
+input.disabled[type=number],
+input.disabled[type=email],
+input.disabled[type=date],
+input.disabled[type=search],
+input.disabled[type=url],
+input.disabled[type=color],
+input.disabled[type=password],
+select.disabled,
+textarea.disabled, .disabled.fake-input, .input-base[disabled], input[disabled][type=text],
+input[disabled][type=number],
+input[disabled][type=email],
+input[disabled][type=date],
+input[disabled][type=search],
+input[disabled][type=url],
+input[disabled][type=color],
+input[disabled][type=password],
+select[disabled],
+textarea[disabled], [disabled].fake-input {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAMUlEQVQIW2NkwAGuXbv2nxGbHEhCS0uLEUMSJgHShCKJLIEiiS4Bl8QmAZbEJQGSBAC62BuJ+tt7zgAAAABJRU5ErkJggg==);
 }
-.input-base[readonly], input[readonly][type=text], input[readonly][type=number], input[readonly][type=email], input[readonly][type=date], input[readonly][type=search], input[readonly][type=url],
-input[readonly][type=color], input[readonly][type=password], select[readonly], textarea[readonly], [readonly].fake-input {
+.input-base[readonly], input[readonly][type=text],
+input[readonly][type=number],
+input[readonly][type=email],
+input[readonly][type=date],
+input[readonly][type=search],
+input[readonly][type=url],
+input[readonly][type=color],
+input[readonly][type=password],
+select[readonly],
+textarea[readonly], [readonly].fake-input {
   background-color: #f8f8f8;
 }
-.input-base:focus, input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, input[type=date]:focus, input[type=search]:focus, input[type=url]:focus,
-input[type=color]:focus, input[type=password]:focus, select:focus, textarea:focus, .fake-input:focus {
+.input-base:focus, input[type=text]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=date]:focus,
+input[type=search]:focus,
+input[type=url]:focus,
+input[type=color]:focus,
+input[type=password]:focus,
+select:focus,
+textarea:focus, .fake-input:focus {
   border-color: var(--color-primary);
   outline: 1px solid var(--color-primary);
 }
@@ -2822,11 +2922,15 @@ label.inline {
   display: inline-block;
 }
 
-label.radio, label.checkbox {
+label.radio,
+label.checkbox {
   font-weight: 400;
   user-select: none;
 }
-label.radio input[type=radio], label.radio input[type=checkbox], label.checkbox input[type=radio], label.checkbox input[type=checkbox] {
+label.radio input[type=radio],
+label.radio input[type=checkbox],
+label.checkbox input[type=radio],
+label.checkbox input[type=checkbox] {
   margin-inline-end: 6px;
 }
 
@@ -2951,7 +3055,14 @@ input[type=color].small {
   margin-top: 16px;
 }
 
-.setting-list .grid input[type=text], .setting-list .grid input[type=email], .setting-list .grid input[type=password], .setting-list .grid select, .stretch-inputs input[type=text], .stretch-inputs input[type=email], .stretch-inputs input[type=password], .stretch-inputs select {
+.setting-list .grid input[type=text],
+.setting-list .grid input[type=email],
+.setting-list .grid input[type=password],
+.setting-list .grid select,
+.stretch-inputs input[type=text],
+.stretch-inputs input[type=email],
+.stretch-inputs input[type=password],
+.stretch-inputs select {
   width: 100%;
 }
 
@@ -2964,7 +3075,10 @@ input[type=color].small {
   width: 100%;
 }
 
-.form-group div.text-pos, .form-group div.text-neg, .form-group p.text-post, .form-group p.text-neg {
+.form-group div.text-pos,
+.form-group div.text-neg,
+.form-group p.text-post,
+.form-group p.text-neg {
   padding: 6px 0;
 }
 
@@ -2985,7 +3099,8 @@ html.dark-mode .form-group.collapsible {
   width: calc(100% + 32px);
   text-align: start;
 }
-.form-group.collapsible .collapse-title, .form-group.collapsible .collapse-title label {
+.form-group.collapsible .collapse-title,
+.form-group.collapsible .collapse-title label {
   cursor: pointer;
 }
 .form-group.collapsible .collapse-title label {
@@ -3029,8 +3144,10 @@ html.dark-mode .form-group.collapsible {
 .search-box {
   max-width: 100%;
   position: relative;
+  border-radius: 5px;
 }
 .search-box button[tabindex="-1"] {
+  border-radius: 0px 5px 5px 0px;
   background-color: transparent;
   border: none;
   color: #666;
@@ -3076,17 +3193,20 @@ html[dir=rtl] .search-box button[tabindex="-1"] {
 html.dark-mode .contained-search-box.floating {
   border: 1px solid #000;
 }
-.contained-search-box input, .contained-search-box button {
+.contained-search-box input,
+.contained-search-box button {
   height: 100%;
   border-radius: 0;
   border: 1px solid #ddd;
   border-color: #ddd;
   margin-inline-start: -1px;
 }
-html.dark-mode .contained-search-box input, html.dark-mode .contained-search-box button {
+html.dark-mode .contained-search-box input,
+html.dark-mode .contained-search-box button {
   border-color: #000;
 }
-.contained-search-box input:last-child, .contained-search-box button:last-child {
+.contained-search-box input:last-child,
+.contained-search-box button:last-child {
   border-inline-end: 0;
 }
 .contained-search-box input {
@@ -5152,7 +5272,8 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
 }
 #header-sudameria .search-box {
   padding: 0px 0px 0px 0px;
-  background-color: #FFF;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 96%, rgba(255, 255, 255, 0) 100%);
 }
 #header-sudameria .search-box .header-search-box-input {
   position: relative;
@@ -5220,7 +5341,7 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
   z-index: 9;
 }
 #header-sudameria .search-box button[tabindex="-1"]:hover {
-  opacity: 0.6;
+  background-color: var(--color-info);
 }
 
 .dark-mode #header-sudameria .card {
@@ -5228,6 +5349,8 @@ html.dark-mode .tri-layout-mobile-tab:first-child {
 }
 .dark-mode #header-sudameria .search-box {
   background-color: #333;
+  background: rgb(51, 51, 51);
+  background: linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(51, 51, 51) 96%, rgba(255, 255, 255, 0) 100%);
 }
 .dark-mode #header-sudameria .search-box input {
   background-color: #333;

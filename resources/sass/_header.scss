@@ -466,7 +466,8 @@ header .search-box.search-active:focus-within {
 
   .search-box {
     padding: 0px 0px 0px 0px;
-    background-color: #FFF;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 96%, rgba(255, 255, 255, 0) 100%);
 
     .header-search-box-input {
 
@@ -555,7 +556,9 @@ header .search-box.search-active:focus-within {
     }
 
     button[tabindex="-1"]:hover {
-      opacity: .6;
+      background-color: var(--color-info);
+      
+      //opacity: .6;
     }
   }
 }
@@ -571,6 +574,8 @@ header .search-box.search-active:focus-within {
 
       background-color: #333;
 
+      background: rgb(51,51,51);
+      background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 96%, rgba(255,255,255,0) 100%);
       input {
         background-color: #333;
       }
