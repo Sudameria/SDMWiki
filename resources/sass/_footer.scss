@@ -6,13 +6,102 @@ footer {
   flex-shrink: 0;
   padding: 1rem 1rem 1rem 1rem;
   text-align: center;
-  color: #333;
+  color: #ffffff;
+  background-color: #000;
 
+  .max-width-1080 {
+    max-width: 1080px;
+  }
+
+  .bottom-text-footer {
+
+    p {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 0px;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      vertical-align: baseline;
+      background: transparent;
+      text-align: left;
+      line-height: 1.8em;
+      font-family: 'graphik-regular', Helvetica, Arial, Lucida, sans-serif;
+      font-size: 12px;
+      word-wrap: break-word;
+      font-weight: 500;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .external-logo {
+    div {
+      background-size: cover;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      width: auto;
+      padding-left: 60px;
+      padding-right: 70px;
+
+      &:first-child {
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 30px;
+        img {
+          width: 140px;
+        }
+      }
+
+      &:last-child {
+        text-align: right;
+        padding-right: 0px;
+        padding-left: 30px;
+
+        span {
+          max-width: 40px !important;
+        }
+      }
+
+      span {
+        display: inline-block;
+
+        width: 106px;
+
+        img {
+          width: 100%;
+          height: auto;
+          margin-left: auto !important;
+          margin-right: auto !important;
+
+
+        }
+
+        .force-height {
+          height: 25px !important;
+        }
+      }
+
+    }
+
+
+  }
+
+  .border-bottom-line {
+    border-bottom: 1px solid #fff;
+  }
+
+  .logo-image {
+    width: 153px;
+    height: auto;
+  }
 
   .footer-social {
 
-    padding: 6px 12px;
-    margin: 6px -12px;
+
 
     ul {
       padding-left: 0px;
@@ -21,7 +110,7 @@ footer {
 
       .icon-border-left {
         padding-left: 5px;
-        border-left: 1px solid #333;
+        border-left: 1px solid #fff;
       }
 
       .icon-border-right {
@@ -35,7 +124,7 @@ footer {
         display: inline-block;
 
         a {
-          color: #333;
+          color: #fff;
           margin-left: .2em;
 
           .lab,
@@ -57,14 +146,18 @@ footer {
 
   #foot-links {
     a {
-      color: #333;
+      color: #ffffff;
       margin-left: .2em;
+
+      i {
+        color: #ffffff;
+      }
     }
 
     h3 {
       font-size: 1.2em;
       font-weight: bold;
-      color: #333;
+      color: #ffffff;
     }
   }
 

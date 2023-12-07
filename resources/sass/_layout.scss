@@ -38,6 +38,9 @@
   &.fourth {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  &.fifth {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
   &.left-focus {
     grid-template-columns: 2fr 1fr;
   }
