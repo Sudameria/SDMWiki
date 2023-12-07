@@ -1,11 +1,14 @@
 <footer class=" px-xl print-hidden text-center ">
     <div class="container py-s flex-container-row gap-l wrap justify-space-between border-bottom-line ">
         <div class="text-left ">
-            @if (setting('app-logo-footer', '') !== 'none' && setting('app-logo-footer', '') !== '')
+            
                 <a href="{{ url('/') }}" data-shortcut="home_view" class="logo">
-                    <img class="logo-image" src="{{ url(setting('app-logo-footer', '')) }}" alt="Logo">
+                    @if (setting('app-logo-footer', '') !== 'none' && setting('app-logo-footer', '') !== '')
+                    {{--<img class="logo-image" src="{{ url(setting('app-logo-footer', '')) }}" alt="Logo">--}}
+                    @endif
+                    <img class="logo-image" src="{{  url('/images/logo_sdm.svg') }}" alt="Logo">
                 </a>
-            @endif
+            
 
         </div>
 
