@@ -15,10 +15,10 @@
 
     <div class="container" id="home-default">
 
-        <div class="grid third gap-x-xxl no-row-gap">
+        <div class="grid third gap-x-m no-row-gap">
             <div>
                 @if(count($draftPages) > 0)
-                    <div id="recent-drafts" class="card mb-xl">
+                    <div id="recent-drafts" class="card mb-m">
                         <h3 class="card-title">{{ trans('entities.my_recent_drafts') }}</h3>
                         <div class="px-m">
                             @include('entities.list', ['entities' => $draftPages, 'style' => 'compact'])
@@ -26,7 +26,7 @@
                     </div>
                 @endif
 
-                <div id="{{ auth()->check() ? 'recently-viewed' : 'recent-books' }}" class="card mb-xl">
+                <div id="{{ auth()->check() ? 'recently-viewed' : 'recent-books' }}" class="card mb-m">
                     <h3 class="card-title">{{ trans('entities.' . (auth()->check() ? 'my_recently_viewed' : 'books_recent')) }}</h3>
                     <div class="px-m">
                         @include('entities.list', [
@@ -44,7 +44,7 @@
 
             <div>
                 @if(count($favourites) > 0)
-                    <div id="top-favourites" class="card mb-xl">
+                    <div id="top-favourites" class="card mb-m">
                         <h3 class="card-title">{{ trans('entities.my_most_viewed_favourites') }}</h3>
                         <div class="px-m">
                             @include('entities.list', [
@@ -56,7 +56,7 @@
                     </div>
                 @endif
 
-                <div id="recent-pages" class="card mb-xl">
+                <div id="recent-pages" class="card mb-m">
                     <h3 class="card-title">{{ trans('entities.recently_updated_pages') }}</h3>
                     <div id="recently-updated-pages" class="px-m">
                         @include('entities.list', [
@@ -72,7 +72,7 @@
             </div>
 
             <div>
-                <div id="recent-activity" class="card mb-xl">
+                <div id="recent-activity" class="card mb-m">
                     <h3 class="card-title">{{ trans('entities.recent_activity') }}</h3>
                     <div class="px-m">
                         @include('common.activity-list', ['activity' => $activity])
