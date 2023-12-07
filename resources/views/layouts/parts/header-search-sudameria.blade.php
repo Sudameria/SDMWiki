@@ -4,7 +4,7 @@
 </span>
     <input id="header-search-box-input" refs="global-search@input" type="text" name="term"
         data-shortcut="global_search" autocomplete="off" aria-label="{{ trans('common.search') }}"
-        placeholder="{{ trans('common.search') }}" value="{{ $searchTerm ?? '' }}">
+        placeholder="Haga una pregunta y Sudameria Wiki le responderá." value="{{ $searchTerm ?? '' }}">
     <button id="header-search-box-button" refs="global-search@button" type="submit"
         aria-label="{{ trans('common.search') }}" tabindex="-1"> {{ trans('common.search') }}</button>
 

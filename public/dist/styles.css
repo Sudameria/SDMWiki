@@ -2002,7 +2002,7 @@ body.flexbox #content {
 .card {
   background-color: #FFF;
   box-shadow: 0 1px 6px -1px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 5px;
   break-inside: avoid;
 }
 html.dark-mode .card {
@@ -4917,7 +4917,7 @@ html.dark-mode header .search-box.search-active:focus-within input {
 }
 
 .logo-image {
-  height: 43px;
+  height: 25px;
 }
 
 .mobile-menu-toggle {

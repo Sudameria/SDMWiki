@@ -19,9 +19,9 @@
     </header>
     @if (user()->hasAppAccess())
         <div
-            class="search-box-container primary-background-opacity flex-container-column items-center justify-center hide-under-l">
-            <h3>{{ setting('app-home-title', '')}}</h3>
-            <p>{{ setting('app-home-subtitle', '')}}</p>
+            class="search-box-container primary-background-opacity flex-container-column items-center justify-center hide-under-l ">
+            <h3 class="mb-l">{{ setting('app-home-title', '')}}</h3>
+           
 
             @include('layouts.parts.header-search-sudameria')
         </div>
