@@ -7015,9 +7015,6 @@ html.dark-mode .page-content details[open] > summary {
   vertical-align: top;
   margin-top: 0.3em;
 }
-.page-content p:empty {
-  min-height: 1.6em;
-}
 .page-content.page-revision pre code {
   white-space: pre-wrap;
 }
