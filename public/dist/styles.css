@@ -4833,8 +4833,6 @@ header.grid {
   }
 }
 header {
-  position: relative;
-  display: block;
   z-index: 11;
   top: 0;
   color: rgb(250, 250, 250);
@@ -4844,6 +4842,19 @@ header {
 }
 html.dark-mode header {
   border-bottom-color: #000;
+}
+header .container {
+  position: relative;
+  display: flex;
+}
+header .container div {
+  position: relative;
+  /*.middle {
+    max-width: 100%;
+  } */
+}
+header .container div .last {
+  margin-left: auto !important;
 }
 header .header-links {
   display: flex;
@@ -5030,14 +5041,14 @@ html.dark-mode header .search-box.search-active:focus-within input {
 }
 
 .logo-text {
-  font-size: 1.8em;
+  font-size: 1.5em;
   color: #fff;
   font-weight: 400;
   line-height: 1;
 }
 
 .logo-image {
-  height: 25px;
+  height: 20px;
 }
 
 .mobile-menu-toggle {
@@ -5396,6 +5407,9 @@ footer .bottom-text-footer p {
 }
 footer .bottom-text-footer p a {
   color: #fff;
+}
+footer .external-logo {
+  padding-bottom: 10px !important;
 }
 footer .external-logo div {
   background-size: cover;
@@ -5875,11 +5889,18 @@ details.sort-box[open] summary .caret-container svg {
 }
 
 .activity-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  position: relative;
   padding: 12px 0;
-  display: grid;
+  /*display: grid;
   grid-template-columns: min-content 1fr;
-  grid-column-gap: 16px;
-  font-size: 0.9em;
+  grid-column-gap: $-m;
+  font-size: 0.9em;*/
 }
 
 .card .activity-list-item {
@@ -7159,8 +7180,8 @@ body.dragging, body.dragging * {
 .avatar {
   border-radius: 100%;
   background-color: #eee;
-  width: 30px;
-  height: 30px;
+  width: 1.88em;
+  height: 1.88em;
 }
 html.dark-mode .avatar {
   background-color: #000;
@@ -7317,7 +7338,6 @@ html.dark-mode .entity-selector .entity-list-item.selected {
   #home-default > .grid.third {
     display: block;
     columns: 2;
-    column-gap: 24px !important;
   }
 }
 .list-sort-container {

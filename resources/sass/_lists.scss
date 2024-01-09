@@ -335,11 +335,21 @@ details.sort-box[open] summary .caret-container svg {
 }
 
 .activity-list-item {
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  position: relative;
+
+  
   padding: $-s 0;
-  display: grid;
+  /*display: grid;
   grid-template-columns: min-content 1fr;
   grid-column-gap: $-m;
-  font-size: 0.9em;
+  font-size: 0.9em;*/
 }
 .card .activity-list-item {
   padding-block: $-s;

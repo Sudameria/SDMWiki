@@ -36,39 +36,70 @@
 
     </div>
 
+<style>
+
+.flex-container {
+    width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-container::before {
+  content: "";
+}
+
+.flex-container::after {
+  content: "";
+}
+
+/* non-essential decorative styles */
+.flex-container {
+  padding: 5px 0;
+  
+  
+}
+.flex-item {
+  height: 50px;
+  width: 75px;
+  
+}
+
+</style>
 
     <div class="container py-xl flex-container-row gap-l wrap justify-space-between border-bottom-line external-logo">
 
+        <div class="flex-container">
 
 
 
-        <div>
+
+        <div class="flex-item">
             <span>
                 <img src="/images/lufthansa.svg">
             </span>
         </div>
-        <div>
+        <div class="flex-item">
             <span>
                 <img src="/images/Mesa-de-trabajo-2.svg">
             </span>
         </div>
-        <div >
+        <div class="flex-item">
             <span>
                 <img src="/images/Mesa-de-trabajo-3.svg">
             </span>
         </div>
-        <div>
+        <div class="flex-item">
             <span>
                 <img class="force-height" src="/images/Mesa-de-trabajo-4.svg">
             </span>
         </div>
-        <div >
+        <div class="flex-item">
             <span>
                 <img src="/images/Mesa-de-trabajo-5.svg">
             </span>
         </div>
 
-
+    </div>
     </div>
 
     <div class="container py-xl flex-container-row gap-l wrap justify-space-between bottom-text-footer">

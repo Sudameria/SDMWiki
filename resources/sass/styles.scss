@@ -41,8 +41,8 @@ body.dragging, body.dragging * {
 .avatar {
   border-radius: 100%;
   @include lightDark(background-color, #eee, #000);
-  width: 30px;
-  height: 30px;
+  width: 1.88em;
+  height: 1.88em;
   &.med {
     width: 40px;
     height: 40px;
@@ -188,7 +188,7 @@ $loadingSize: 10px;
   #home-default > .grid.third {
     display: block;
     columns: 2;
-    column-gap: $-l !important;
+    //column-gap: $-l !important;
   }
 }
 
