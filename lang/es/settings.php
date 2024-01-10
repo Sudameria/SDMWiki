@@ -39,7 +39,7 @@ return [
     'app_home_title' => 'Título en la landing page',
     'app_home_title_desc' => 'Título que se mostrará en la landing page arriba del buscador',
     'app_home_subtitle' => 'Subtítulo en al landing page',
-    'app_home_subtitle_desc' => 'Subtítulo que se mostrará debajp del título de la página principal',
+    'app_home_subtitle_desc' => 'Subtítulo que se mostrará debajo del título de la página principal',
     'app_home_image' => 'Imagen de la landing',
     'app_home_image_desc' => 'Imagen que se muestra en la landing de la wiki',
     'app_icon' => 'Icono de la aplicación',

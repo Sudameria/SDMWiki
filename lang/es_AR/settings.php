@@ -39,7 +39,7 @@ return [
     'app_home_title' => 'Título en la landing page',
     'app_home_title_desc' => 'Título que se mostrará en la landing page arriba del buscador',
     'app_home_subtitle' => 'Subtítulo en al landing page',
-    'app_home_subtitle_desc' => 'Subtítulo que se mostrará debajp del título de la página principal',
+    'app_home_subtitle_desc' => 'Subtítulo que se mostrará debajo del título de la página principal',
 
     'app_icon' => 'Icono de la aplicación',
     'app_icon_desc' => 'Se utiliza para las pestañas del navegador y los accesos directos. Debería ser una imagen PNG cuadrada de 256px.',
