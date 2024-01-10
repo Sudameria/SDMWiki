@@ -41,8 +41,8 @@ body.dragging, body.dragging * {
 .avatar {
   border-radius: 100%;
   @include lightDark(background-color, #eee, #000);
-  width: 1.88em;
-  height: 1.88em;
+  width: 1.5em;
+  height: 1.5em;
   &.med {
     width: 40px;
     height: 40px;

@@ -7180,8 +7180,8 @@ body.dragging, body.dragging * {
 .avatar {
   border-radius: 100%;
   background-color: #eee;
-  width: 1.88em;
-  height: 1.88em;
+  width: 1.5em;
+  height: 1.5em;
 }
 html.dark-mode .avatar {
   background-color: #000;
