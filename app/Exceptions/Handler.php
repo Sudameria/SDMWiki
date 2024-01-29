@@ -70,6 +70,20 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $e)
     {
+
+
+        if ($this->isHttpException($e)) {
+            if ($e->getStatusCode() == 404) {
+                return response()->view('errors.404', [], 404);
+            }
+            if ($e->getStatusCode() == 500) {
+                return response()->view('errors.500', [], 500);
+            }
+            if ($e->getStatusCode() == 503) {
+                return response()->view('errors.503', [], 503);
+            }
+        }
+
         if ($e instanceof FatalError && str_contains($e->getMessage(), 'bytes exhausted (tried to allocate') && $this->onOutOfMemory) {
             $response = call_user_func($this->onOutOfMemory);
             if ($response) {
