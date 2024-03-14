@@ -103,7 +103,7 @@
     </div>
 
     <div class="container py-xl flex-container-row gap-l wrap justify-space-between bottom-text-footer">
-        <p>© 2021 Sudameria Incoming Solutions SRL <br><span>Lavalle 348, C1047, CABA, Argentina | 54.11.5218.6619 | <a href="#">info@sudameria.com.ar</a></span>&nbsp;| Legajo: EVT 11776</p>
+        <p>© 2021 Sudameria Incoming Solutions SRL CUIT 33708398999<br><span>Lavalle 348, C1047, CABA, Argentina | 54.11.5218.6619 | <a href="#">info@sudameria.com.ar</a></span>&nbsp;| Legajo: EVT 11776</p>
     </div>
 
     @if (count(setting('app-footer-links', [])) > 0)
