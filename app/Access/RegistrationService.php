@@ -88,11 +88,30 @@ class RegistrationService
         // Email restriction
         $this->ensureEmailDomainAllowed($userEmail);
 
-        // Ensure user does not already exist
-        $alreadyUser = !is_null($this->userRepo->getByEmail($userEmail));
-        if ($alreadyUser) {
-            throw new UserRegistrationException(trans('errors.error_user_exists_different_creds', ['email' => $userEmail]), '/login');
+        $existingUser = $this->userRepo->getByEmail($userEmail);
+
+        if ($existingUser) {
+            // Solo bloquear si no se está intentando vincular un social account
+            if (!$socialAccount) {
+                throw new UserRegistrationException(trans('errors.error_user_exists_different_creds', ['email' => $userEmail]), '/login');
+            }
+
+            // Si el SocialAccount ya está en uso por otro usuario
+            $conflict = SocialAccount::query()
+                ->where('driver', $socialAccount->driver)
+                ->where('driver_id', $socialAccount->driver_id)
+                ->where('user_id', '!=', $existingUser->id)
+                ->exists();
+
+            if ($conflict) {
+                throw new UserRegistrationException(trans('errors.social_account_already_used_existing', ['socialAccount' => Str::title($socialAccount->driver)]), '/login');
+            }
+
+            // En este caso se permite el vínculo del social a la cuenta ya existente
+            $existingUser->socialAccounts()->save($socialAccount);
+            return $existingUser;
         }
+
 
         // Create the user
         $newUser = $this->userRepo->createWithoutActivity($userData, $emailConfirmed);

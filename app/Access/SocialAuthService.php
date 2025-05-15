@@ -103,10 +103,21 @@ class SocialAuthService
             throw new UserRegistrationException(trans('errors.social_account_in_use', ['socialAccount' => $socialDriver]), '/login');
         }
 
-        if (User::query()->where('email', '=', $socialUser->getEmail())->exists()) {
-            $email = $socialUser->getEmail();
+        $userWithEmail = User::query()->where('email', '=', $socialUser->getEmail())->first();
 
-            throw new UserRegistrationException(trans('errors.error_user_exists_different_creds', ['email' => $email]), '/login');
+        if ($userWithEmail) {
+            // Si el usuario ya tiene una cuenta social con este driver, bloqueamos el registro
+            $alreadyHasThisSocial = $userWithEmail->socialAccounts()
+                ->where('driver', $socialDriver)
+                ->where('driver_id', $socialUser->getId())
+                ->exists();
+
+            if ($alreadyHasThisSocial) {
+                throw new UserRegistrationException(trans('errors.social_account_in_use', ['socialAccount' => $socialDriver]), '/login');
+            }
+
+            // Si el usuario existe pero nunca vinculó este proveedor, permitimos (NO tiramos excepción)
+            return $socialUser;
         }
 
         return $socialUser;
@@ -132,46 +143,54 @@ class SocialAuthService
     public function handleLoginCallback(string $socialDriver, SocialUser $socialUser)
     {
         $socialId = $socialUser->getId();
+        $email = $socialUser->getEmail();
 
-        // Get any attached social accounts or users
+        // Buscar si ya hay una cuenta social con este driver_id
         $socialAccount = SocialAccount::query()->where('driver_id', '=', $socialId)->first();
+        $userWithEmail = User::query()->where('email', $email)->first();
+
         $isLoggedIn = auth()->check();
         $currentUser = user();
         $titleCaseDriver = Str::title($socialDriver);
 
-        // When a user is not logged in and a matching SocialAccount exists,
-        // Simply log the user into the application.
+        // 🔒 Si la cuenta social ya existe y no estamos logueados, logueamos directamente
         if (!$isLoggedIn && $socialAccount !== null) {
             $this->loginService->login($socialAccount->user, $socialDriver);
-
             return redirect()->intended('/');
         }
 
-        // When a user is logged in but the social account does not exist,
-        // Create the social account and attach it to the user & redirect to the profile page.
+        // ✅ Si estamos logueados y no hay cuenta social, la vinculamos al usuario actual
         if ($isLoggedIn && $socialAccount === null) {
             $account = $this->newSocialAccount($socialDriver, $socialUser);
             $currentUser->socialAccounts()->save($account);
             session()->flash('success', trans('settings.users_social_connected', ['socialAccount' => $titleCaseDriver]));
-
             return redirect('/my-account/auth#social_accounts');
         }
 
-        // When a user is logged in and the social account exists and is already linked to the current user.
-        if ($isLoggedIn && $socialAccount !== null && $socialAccount->user->id === $currentUser->id) {
-            session()->flash('error', trans('errors.social_account_existing', ['socialAccount' => $titleCaseDriver]));
-
-            return redirect('/my-account/auth#social_accounts');
-        }
-
-        // When a user is logged in, A social account exists but the users do not match.
-        if ($isLoggedIn && $socialAccount !== null && $socialAccount->user->id != $currentUser->id) {
+        // ⚠️ Si estamos logueados y el social account ya existe pero es de otro usuario
+        if ($isLoggedIn && $socialAccount && $socialAccount->user_id !== $currentUser->id) {
             session()->flash('error', trans('errors.social_account_already_used_existing', ['socialAccount' => $titleCaseDriver]));
-
             return redirect('/my-account/auth#social_accounts');
         }
 
-        // Otherwise let the user know this social account is not used by anyone.
+        // ⚠️ Si ya existe y está vinculado al mismo usuario logueado
+        if ($isLoggedIn && $socialAccount && $socialAccount->user_id === $currentUser->id) {
+            session()->flash('error', trans('errors.social_account_existing', ['socialAccount' => $titleCaseDriver]));
+            return redirect('/my-account/auth#social_accounts');
+        }
+
+        // ✅ Si no hay SocialAccount pero el email ya existe, vinculamos al usuario y lo logueamos
+        if (!$isLoggedIn && $userWithEmail && !$userWithEmail->socialAccounts()
+            ->where('driver', $socialDriver)
+            ->where('driver_id', $socialId)
+            ->exists()) {
+            $account = $this->newSocialAccount($socialDriver, $socialUser);
+            $userWithEmail->socialAccounts()->save($account);
+            $this->loginService->login($userWithEmail, $socialDriver);
+            return redirect()->intended('/');
+        }
+
+        // 🛑 Si llegamos acá y hay conflicto, lo bloqueamos
         $message = trans('errors.social_account_not_used', ['socialAccount' => $titleCaseDriver]);
         if (setting('registration-enabled') && config('auth.method') !== 'ldap' && config('auth.method') !== 'saml2') {
             $message .= trans('errors.social_account_register_instructions', ['socialAccount' => $titleCaseDriver]);
@@ -179,6 +198,7 @@ class SocialAuthService
 
         throw new SocialSignInAccountNotUsed($message, '/login');
     }
+
 
     /**
      * Ensure the social driver is correct and supported.
