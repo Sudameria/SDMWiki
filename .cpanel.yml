@@ -2,6 +2,6 @@ deployment:
  tasks:
  - cp -R /home/suda2501/repositories/SDMWiki/* /home/suda2501/wiki.sudameria.com/
  - /opt/cpanel/composer/bin/composer install --no-dev --working-dir=/home/suda2501/wiki.sudameria.com/
- - php /home/suda2501/wiki.sudameria.com/artisan view:cache
  - php /home/suda2501/wiki.sudameria.com/artisan view:clear
+ - php /home/suda2501/wiki.sudameria.com/artisan view:cache
  - php /home/suda2501/wiki.sudameria.com/artisan migrate --force

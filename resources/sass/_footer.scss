@@ -46,6 +46,7 @@ footer {
 
   .external-logo {
     padding-bottom: 10px !important;
+
     div {
       background-size: cover;
       background-position: 50%;
@@ -66,7 +67,7 @@ footer {
 
       }
 
-      
+
 
       span {
         display: inline-block;
@@ -87,6 +88,7 @@ footer {
           height: 25px !important;
         }
       }
+
       @include smaller-than($m) {
         text-align: center !important;
         width: 100%;
@@ -94,21 +96,24 @@ footer {
         span {
           width: 130px;
           max-height: 30px;
+
           .force-height {
             height: 50px !important;
+
             img {
               width: 150px;
             }
-            
+
           }
         }
+
         &:last-child {
           text-align: right;
-  
+
           img {
             height: 50px !important;
           }
-  
+
         }
       }
 
@@ -196,4 +201,55 @@ footer {
 
 body.flexbox footer {
   display: none;
+}
+
+@media (max-width: 600px) {
+
+  footer .external-logo span,
+  footer .external-logo .flex-item {
+    width: 80px !important;
+    max-width: 80px !important;
+  }
+
+  footer .external-logo img {
+    max-width: 70px !important;
+    max-height: 30px !important;
+    width: auto !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer .external-logo .force-height {
+    height: 30px !important;
+    max-width: 70px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 450px) {
+  footer .external-logo .flex-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    /* para dejar un poco de espacio entre logos */
+  }
+
+  footer .external-logo .flex-item,
+  footer .external-logo span {
+    width: 100% !important;
+    max-width: 140px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  footer .external-logo img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 100px !important;
+    max-height: 32px !important;
+    width: auto !important;
+    height: auto !important;
+  }
 }
