@@ -235,7 +235,13 @@ class BookContents
             }
 
             $hasPageEditPermission = userCan('page-update', $model);
-            $newParentInRightLocation = ($newParent instanceof Book || ($newParent instanceof Chapter && $newParent->book_id === $newBook->id));
+            $newParentInRightLocation = (
+                $newParent instanceof Book
+                || (
+                    $newParent instanceof Chapter
+                    && ((int)$newParent->book_id === (int)$newBook->id)
+                )
+            );
             $newParentPermission = ($newParent instanceof Chapter) ? 'chapter-update' : 'book-update';
             $hasNewParentPermission = userCan($newParentPermission, $newParent);
 
