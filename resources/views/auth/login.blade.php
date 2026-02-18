@@ -30,8 +30,8 @@
             <div class="text-center pb-s">
                 <hr class="my-l">
 
-                <p>{{ trans('auth.log_in_footer_text') }}</p>
-                <p>{{ trans('auth.log_in_footer_description') }}</p>
+                <p>{{ trans('auth.log_in_footer_text') }}<br>
+                {{ trans('auth.log_in_footer_description') }}</p>
 
                 @if (setting('registration-enabled') && config('auth.method') === 'standard')
                     <a href="{{ url('/register') }}">{{ trans('auth.dont_have_account') }}</a>
