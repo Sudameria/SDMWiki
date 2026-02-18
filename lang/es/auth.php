@@ -12,7 +12,10 @@ return [
     // Login & Register
     'sign_up' => 'Registrarse',
     'log_in' => 'Acceder',
+    'log_in_sudameria' => 'Acceso interno Sudameria',
     'log_in_with' => 'Acceder con :socialDriver',
+    'log_in_footer_text' => 'Acceso exclusivo para personal de Sudameria.',
+    'log_in_footer_description' => 'El contenido para clientes es público.',
     'sign_up_with' => 'Registrarse con :socialDriver',
     'logout' => 'Cerrar sesión',
 

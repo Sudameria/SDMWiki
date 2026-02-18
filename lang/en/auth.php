@@ -16,6 +16,10 @@ return [
     'sign_up_with' => 'Sign up with :socialDriver',
     'logout' => 'Logout',
 
+    'log_in_sudameria' => 'Internal Access Sudameria',
+    'log_in_footer_text' => 'Exclusive access for Sudameria staff.',
+    'log_in_footer_description' => 'Content for clients is public.',
+
     'name' => 'Name',
     'username' => 'Username',
     'email' => 'Email',

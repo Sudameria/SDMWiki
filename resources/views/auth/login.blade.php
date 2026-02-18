@@ -7,7 +7,8 @@
         <div class="my-l">&nbsp;</div>
 
         <div class="card content-wrap auto-height">
-            <h1 class="list-heading">{{ Str::title(trans('auth.log_in')) }}</h1>
+            <h1 class="list-heading">{{ Str::title(trans('auth.log_in_sudameria')) }}</h1>
+
 
             @include('auth.parts.login-message')
             @include('auth.parts.login-form-' . $authMethod)
@@ -25,12 +26,17 @@
                 @endforeach
             @endif
 
-            @if (setting('registration-enabled') && config('auth.method') === 'standard')
-                <div class="text-center pb-s">
-                    <hr class="my-l">
+
+            <div class="text-center pb-s">
+                <hr class="my-l">
+
+                <p>{{ trans('auth.log_in_footer_text') }}</p>
+                <p>{{ trans('auth.log_in_footer_description') }}</p>
+
+                @if (setting('registration-enabled') && config('auth.method') === 'standard')
                     <a href="{{ url('/register') }}">{{ trans('auth.dont_have_account') }}</a>
-                </div>
-            @endif
+                @endif
+            </div>
         </div>
     </div>
 
