@@ -2,7 +2,7 @@
     <style>
         .sdm-footer {
             flex-shrink: 0;
-            padding: 34px 24px 28px;
+            padding: 26px 20px 22px;
             color: #ffffff;
             background: #000000;
             text-align: left;
@@ -28,7 +28,7 @@
         }
 
         .sdm-footer__section {
-            padding: 22px 0;
+            padding: 16px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.92);
         }
 
@@ -45,7 +45,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
+            gap: 18px;
         }
 
         .sdm-footer__brand {
@@ -55,7 +55,7 @@
 
         .sdm-footer__brand img {
             display: block;
-            width: 305px;
+            width: 240px;
             max-width: 100%;
             height: auto;
         }
@@ -63,7 +63,7 @@
         .sdm-footer__social {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -73,9 +73,9 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 24px;
-            height: 24px;
-            font-size: 18px;
+            width: 18px;
+            height: 18px;
+            font-size: 15px;
             line-height: 1;
         }
 
@@ -83,14 +83,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 28px;
+            gap: 20px;
         }
 
         .sdm-footer__logo-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 40px;
+            min-height: 28px;
             flex: 1 1 0;
         }
 
@@ -99,14 +99,14 @@
             max-width: 100%;
             width: auto;
             height: auto;
-            max-height: 34px;
+            max-height: 28px;
         }
 
         .sdm-footer__bottom {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 40px;
+            gap: 24px;
         }
 
         .sdm-footer__certification {
@@ -115,16 +115,17 @@
 
         .sdm-footer__certification img {
             display: block;
-            width: 158px;
+            width: 126px;
             max-width: 100%;
             height: auto;
+            filter: invert(1);
         }
 
         .sdm-footer__info {
             flex: 1 1 auto;
             text-align: right;
-            font-size: 13px;
-            line-height: 1.35;
+            font-size: 11px;
+            line-height: 1.3;
             font-weight: 400;
         }
 
@@ -137,7 +138,7 @@
         }
 
         .sdm-footer__links {
-            margin-top: 18px;
+            margin-top: 14px;
             text-align: center;
         }
 
@@ -148,7 +149,7 @@
 
         @media (max-width: 900px) {
             .sdm-footer {
-                padding: 28px 20px 24px;
+                padding: 22px 18px 18px;
             }
 
             .sdm-footer__top,
@@ -167,7 +168,7 @@
             }
 
             .sdm-footer__logo-item {
-                flex: 0 1 160px;
+                flex: 0 1 140px;
             }
 
             .sdm-footer__info {
@@ -177,32 +178,32 @@
 
         @media (max-width: 600px) {
             .sdm-footer__brand img {
-                width: 240px;
+                width: 200px;
             }
 
             .sdm-footer__section {
-                padding: 18px 0;
+                padding: 14px 0;
             }
 
             .sdm-footer__logos {
-                gap: 18px 12px;
+                gap: 14px 10px;
             }
 
             .sdm-footer__logo-item {
                 flex: 0 1 calc(50% - 6px);
-                min-height: 34px;
+                min-height: 28px;
             }
 
             .sdm-footer__logo-item img {
-                max-height: 28px;
+                max-height: 22px;
             }
 
             .sdm-footer__certification img {
-                width: 130px;
+                width: 110px;
             }
 
             .sdm-footer__info {
-                font-size: 12px;
+                font-size: 10px;
             }
 
             .sdm-footer__links a {
