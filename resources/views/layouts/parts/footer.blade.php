@@ -1,10 +1,9 @@
 <footer class="print-hidden sdm-footer">
     <style>
         .sdm-footer {
-            flex-shrink: 0;
-            padding: 26px 20px 22px;
-            color: #ffffff;
-            background: #000000;
+            background: #000;
+            color: #fff;
+            padding: 26px 0 20px;
             text-align: left;
         }
 
@@ -13,49 +12,62 @@
             box-sizing: border-box;
         }
 
-        .sdm-footer a {
-            color: #ffffff;
+        .sdm-footer a,
+        .sdm-footer a:visited {
+            color: #fff;
             text-decoration: none;
         }
 
-        .sdm-footer a:hover {
-            opacity: 0.9;
-        }
-
-        .sdm-footer__inner {
-            max-width: 1250px;
+        .sdm-footer__container {
+            width: 100%;
+            max-width: 1280px;
             margin: 0 auto;
+            padding: 0 30px;
         }
 
-        .sdm-footer__section {
-            padding: 16px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.92);
+        .sdm-footer__row {
+            width: 100%;
         }
 
-        .sdm-footer__section:first-child {
-            padding-top: 0;
+        .sdm-footer__row--top {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 6px 0 24px;
         }
 
-        .sdm-footer__section:last-of-type {
-            border-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .sdm-footer__top {
+        .sdm-footer__row--logos {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 18px;
+            gap: 24px;
+            padding: 22px 0;
+        }
+
+        .sdm-footer__row--bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            padding: 18px 0 0;
+        }
+
+        .sdm-footer__divider {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.9);
+            margin: 0;
         }
 
         .sdm-footer__brand {
             display: inline-flex;
             align-items: center;
+            flex: 0 0 auto;
         }
 
         .sdm-footer__brand img {
             display: block;
-            width: 240px;
+            width: 310px;
             max-width: 100%;
             height: auto;
         }
@@ -63,10 +75,18 @@
         .sdm-footer__social {
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: flex-end;
+            gap: 14px;
             margin: 0;
             padding: 0;
             list-style: none;
+            flex: 0 0 auto;
+        }
+
+        .sdm-footer__social li {
+            margin: 0;
+            padding: 0;
+            line-height: 1;
         }
 
         .sdm-footer__social a {
@@ -75,57 +95,66 @@
             justify-content: center;
             width: 18px;
             height: 18px;
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1;
         }
 
-        .sdm-footer__logos {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .sdm-footer__logo-item {
+        .sdm-footer__logos-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 28px;
             flex: 1 1 0;
+            min-width: 0;
         }
 
-        .sdm-footer__logo-item img {
+        .sdm-footer__logos-item img {
             display: block;
-            max-width: 100%;
             width: auto;
+            max-width: 100%;
             height: auto;
-            max-height: 28px;
         }
 
-        .sdm-footer__bottom {
+        .sdm-footer__logos-item--lufthansa img {
+            height: 28px;
+        }
+
+        .sdm-footer__logos-item--facve img {
+            height: 27px;
+        }
+
+        .sdm-footer__logos-item--aviabue img {
+            height: 26px;
+        }
+
+        .sdm-footer__logos-item--pci img {
+            height: 24px;
+        }
+
+        .sdm-footer__logos-item--iata img {
+            height: 24px;
+        }
+
+        .sdm-footer__iso {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 24px;
+            justify-content: flex-start;
+            flex: 0 0 180px;
+            min-width: 180px;
         }
 
-        .sdm-footer__certification {
-            flex: 0 0 auto;
-        }
-
-        .sdm-footer__certification img {
+        .sdm-footer__iso img {
             display: block;
-            width: 126px;
-            max-width: 100%;
+            width: 118px;
             height: auto;
             filter: invert(1);
+            transform-origin: left center;
         }
 
         .sdm-footer__info {
             flex: 1 1 auto;
             text-align: right;
-            font-size: 11px;
-            line-height: 1.3;
+            font-size: 12px;
+            line-height: 1.42;
             font-weight: 400;
         }
 
@@ -133,42 +162,52 @@
             margin: 0;
         }
 
-        .sdm-footer__info p + p {
-            margin-top: 2px;
-        }
-
         .sdm-footer__links {
-            margin-top: 14px;
+            padding-top: 14px;
             text-align: center;
         }
 
         .sdm-footer__links a {
+            display: inline-block;
             margin: 0 8px;
-            white-space: nowrap;
         }
 
         @media (max-width: 900px) {
             .sdm-footer {
-                padding: 22px 18px 18px;
+                padding: 24px 0 18px;
             }
 
-            .sdm-footer__top,
-            .sdm-footer__bottom {
-                flex-direction: column;
+            .sdm-footer__container {
+                padding: 0 20px;
+            }
+
+            .sdm-footer__row--top,
+            .sdm-footer__row--bottom {
                 align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .sdm-footer__row--logos {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px 22px;
+            }
+
+            .sdm-footer__brand img {
+                width: 260px;
             }
 
             .sdm-footer__social {
                 justify-content: flex-start;
             }
 
-            .sdm-footer__logos {
-                flex-wrap: wrap;
-                justify-content: center;
+            .sdm-footer__logos-item {
+                flex: 0 1 180px;
             }
 
-            .sdm-footer__logo-item {
-                flex: 0 1 140px;
+            .sdm-footer__iso {
+                min-width: 0;
+                flex-basis: auto;
             }
 
             .sdm-footer__info {
@@ -176,45 +215,56 @@
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 640px) {
+            .sdm-footer__container {
+                padding: 0 16px;
+            }
+
+            .sdm-footer__row--top {
+                padding: 4px 0 18px;
+            }
+
+            .sdm-footer__row--logos {
+                padding: 18px 0;
+                gap: 16px 12px;
+            }
+
+            .sdm-footer__row--bottom {
+                padding-top: 16px;
+                gap: 16px;
+            }
+
             .sdm-footer__brand img {
-                width: 200px;
+                width: 220px;
             }
 
-            .sdm-footer__section {
-                padding: 14px 0;
+            .sdm-footer__logos-item {
+                flex: 0 1 calc(50% - 8px);
             }
 
-            .sdm-footer__logos {
-                gap: 14px 10px;
+            .sdm-footer__logos-item--lufthansa img {
+                height: 24px;
             }
 
-            .sdm-footer__logo-item {
-                flex: 0 1 calc(50% - 6px);
-                min-height: 28px;
+            .sdm-footer__logos-item--facve img,
+            .sdm-footer__logos-item--aviabue img,
+            .sdm-footer__logos-item--pci img,
+            .sdm-footer__logos-item--iata img {
+                height: 22px;
             }
 
-            .sdm-footer__logo-item img {
-                max-height: 22px;
-            }
-
-            .sdm-footer__certification img {
-                width: 110px;
+            .sdm-footer__iso img {
+                width: 104px;
             }
 
             .sdm-footer__info {
-                font-size: 10px;
-            }
-
-            .sdm-footer__links a {
-                display: inline-block;
-                margin: 4px 6px;
+                font-size: 11px;
             }
         }
     </style>
 
-    <div class="sdm-footer__inner">
-        <div class="sdm-footer__section sdm-footer__top">
+    <div class="sdm-footer__container">
+        <div class="sdm-footer__row sdm-footer__row--top">
             <a href="https://sudameria.com" data-shortcut="home_view" class="sdm-footer__brand" aria-label="Sudameria">
                 <img src="{{ url('/images/logo_sdm.svg') }}" alt="Sudameria">
             </a>
@@ -238,26 +288,30 @@
             </ul>
         </div>
 
-        <div class="sdm-footer__section sdm-footer__logos" aria-label="Afiliaciones y certificaciones">
-            <div class="sdm-footer__logo-item">
+        <hr class="sdm-footer__divider">
+
+        <div class="sdm-footer__row sdm-footer__row--logos" aria-label="Afiliaciones y certificaciones">
+            <div class="sdm-footer__logos-item sdm-footer__logos-item--lufthansa">
                 <img src="{{ url('/images/lufthansa.svg') }}" alt="Lufthansa City Center Sudameria">
             </div>
-            <div class="sdm-footer__logo-item">
+            <div class="sdm-footer__logos-item sdm-footer__logos-item--facve">
                 <img src="{{ url('/images/Mesa-de-trabajo-2.svg') }}" alt="FACVE">
             </div>
-            <div class="sdm-footer__logo-item">
+            <div class="sdm-footer__logos-item sdm-footer__logos-item--aviabue">
                 <img src="{{ url('/images/Mesa-de-trabajo-3.svg') }}" alt="AVIABUE">
             </div>
-            <div class="sdm-footer__logo-item">
+            <div class="sdm-footer__logos-item sdm-footer__logos-item--pci">
                 <img src="{{ url('/images/Mesa-de-trabajo-4.svg') }}" alt="PCI DSS">
             </div>
-            <div class="sdm-footer__logo-item">
+            <div class="sdm-footer__logos-item sdm-footer__logos-item--iata">
                 <img src="{{ url('/images/Mesa-de-trabajo-5.svg') }}" alt="IATA">
             </div>
         </div>
 
-        <div class="sdm-footer__section sdm-footer__bottom">
-            <div class="sdm-footer__certification">
+        <hr class="sdm-footer__divider">
+
+        <div class="sdm-footer__row sdm-footer__row--bottom">
+            <div class="sdm-footer__iso">
                 <img src="{{ url('/images/logo iso.svg') }}" alt="Certificacion ISO 9001:2015">
             </div>
 
