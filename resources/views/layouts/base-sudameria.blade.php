@@ -61,7 +61,7 @@
         @yield('content')
     </div>
 
-    @include('layouts.parts.footer')
+    @include('layouts.parts.footer-sudameria-v2')
 
     <div component="back-to-top" class="back-to-top print-hidden">
         <div class="inner">
