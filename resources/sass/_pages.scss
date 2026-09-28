@@ -21,6 +21,34 @@
   }
 }
 
+// Page editing uses BookStack's full-height flex layout, but the document must
+// still be able to grow so the footer remains reachable below the editor.
+html.page-edit-layout {
+  height: auto;
+  overflow-y: auto;
+}
+
+body.flexbox.page-edit-layout {
+  height: auto;
+  max-height: none;
+  min-height: 100%;
+  overflow: visible;
+
+  #content {
+    flex: 0 0 auto;
+    min-height: calc(100vh - 64px);
+  }
+
+  #main-content {
+    height: auto;
+    min-height: calc(100vh - 64px);
+  }
+
+  .page-editor {
+    min-height: 100%;
+  }
+}
+
 .page-editor-page-area {
   width: 100%;
   border-radius: 8px;

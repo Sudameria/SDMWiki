@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ isset($locale) ? $locale->htmlLang() : config('app.default_locale') }}"
       dir="{{ isset($locale) ? $locale->htmlDirection() : 'auto' }}"
-      class="{{ setting()->getForCurrentUser('dark-mode-enabled') ? 'dark-mode ' : '' }}">
+      class="{{ setting()->getForCurrentUser('dark-mode-enabled') ? 'dark-mode ' : '' }}@stack('html-class')">
 <head>
     <title>{{ isset($pageTitle) ? $pageTitle . ' | ' : '' }}{{ setting('app-name') }}</title>
     
@@ -67,9 +67,7 @@
         @yield('content')
     </div>
 
-    @if (!View::hasSection('hide-footer'))
-        @include('layouts.parts.footer-sudameria-v2')
-    @endif
+    @include('layouts.parts.footer-sudameria-v2')
 
     <div component="back-to-top" class="back-to-top print-hidden">
         <div class="inner">

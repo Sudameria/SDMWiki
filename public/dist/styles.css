@@ -5514,7 +5514,7 @@ footer #foot-links h3 {
   color: #ffffff;
 }
 
-body.flexbox footer {
+body.flexbox:not(.page-edit-layout) footer {
   display: none;
 }
 
@@ -6515,6 +6515,29 @@ html.dark-mode .active-link-list.in-sidebar a.active {
 }
 .page-editor .mce-top-part::before {
   box-shadow: none;
+}
+
+html.page-edit-layout {
+  height: auto;
+  overflow-y: auto;
+}
+
+body.flexbox.page-edit-layout {
+  height: auto;
+  max-height: none;
+  min-height: 100%;
+  overflow: visible;
+}
+body.flexbox.page-edit-layout #content {
+  flex: 0 0 auto;
+  min-height: calc(100vh - 64px);
+}
+body.flexbox.page-edit-layout #main-content {
+  height: auto;
+  min-height: calc(100vh - 64px);
+}
+body.flexbox.page-edit-layout .page-editor {
+  min-height: 100%;
 }
 
 .page-editor-page-area {
