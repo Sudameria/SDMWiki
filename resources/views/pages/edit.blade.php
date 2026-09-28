@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('hide-footer', true)
+
 @push('body-class', 'flexbox ')
 
 @section('content')

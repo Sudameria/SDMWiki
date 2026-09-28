@@ -67,7 +67,9 @@
         @yield('content')
     </div>
 
-    @include('layouts.parts.footer-sudameria-v2')
+    @if (!View::hasSection('hide-footer'))
+        @include('layouts.parts.footer-sudameria-v2')
+    @endif
 
     <div component="back-to-top" class="back-to-top print-hidden">
         <div class="inner">
