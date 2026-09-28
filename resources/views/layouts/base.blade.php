@@ -1,7 +1,10 @@
+@php
+    $isPageEditLayout = request()->is('books/*/page/*/edit', 'books/*/draft/*');
+@endphp
 <!DOCTYPE html>
 <html lang="{{ isset($locale) ? $locale->htmlLang() : config('app.default_locale') }}"
       dir="{{ isset($locale) ? $locale->htmlDirection() : 'auto' }}"
-      class="{{ setting()->getForCurrentUser('dark-mode-enabled') ? 'dark-mode ' : '' }}@stack('html-class')">
+      class="{{ setting()->getForCurrentUser('dark-mode-enabled') ? 'dark-mode ' : '' }}{{ $isPageEditLayout ? 'page-edit-layout ' : '' }}@stack('html-class')">
 <head>
     <title>{{ isset($pageTitle) ? $pageTitle . ' | ' : '' }}{{ setting('app-name') }}</title>
     
@@ -56,7 +59,7 @@
         component="shortcuts"
         option:shortcuts:key-map="{{ \BookStack\Settings\UserShortcutMap::fromUserPreferences()->toJson() }}"
     @endif
-      class="@stack('body-class')">
+      class="{{ $isPageEditLayout ? 'page-edit-layout ' : '' }}@stack('body-class')">
 
     @include('layouts.parts.base-body-start')
     @include('layouts.parts.skip-to-content')
