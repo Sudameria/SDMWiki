@@ -6529,12 +6529,21 @@ body.flexbox.page-edit-layout {
   overflow: visible;
 }
 body.flexbox.page-edit-layout #content {
-  flex: 0 0 auto;
+  flex: 0 0 calc(100vh - 64px);
+  height: calc(100vh - 64px);
   min-height: calc(100vh - 64px);
 }
 body.flexbox.page-edit-layout #main-content {
+  flex: 0 0 auto;
   height: auto;
   min-height: calc(100vh - 64px);
+}
+body.flexbox.page-edit-layout #main-content > form {
+  flex: 0 0 auto;
+  min-height: 100%;
+}
+body.flexbox.page-edit-layout footer {
+  flex: 0 0 auto;
 }
 body.flexbox.page-edit-layout .page-editor {
   min-height: 100%;

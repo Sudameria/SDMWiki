@@ -35,13 +35,24 @@ body.flexbox.page-edit-layout {
   overflow: visible;
 
   #content {
-    flex: 0 0 auto;
+    flex: 0 0 calc(100vh - 64px);
+    height: calc(100vh - 64px);
     min-height: calc(100vh - 64px);
   }
 
   #main-content {
+    flex: 0 0 auto;
     height: auto;
     min-height: calc(100vh - 64px);
+  }
+
+  #main-content > form {
+    flex: 0 0 auto;
+    min-height: 100%;
+  }
+
+  footer {
+    flex: 0 0 auto;
   }
 
   .page-editor {
